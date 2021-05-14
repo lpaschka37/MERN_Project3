@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
+// eslint-disable-next-line prefer-destructuring
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -8,6 +10,6 @@ const userSchema = new Schema({
   role: { type: String, required: true },
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

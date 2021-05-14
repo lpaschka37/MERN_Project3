@@ -1,0 +1,32 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "airbnb-base",
+      "plugin:react/recommended"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/state-in-constructor": ["error", "never"],
+    "max-len": "off",
+    "no-alert": "off",
+    "no-console": "off",
+    "comma-dangle": "off",
+    "global-require": "off"
+  }
+}
