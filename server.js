@@ -20,7 +20,7 @@ app.use("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onlineproducts");
 
 // Start the API server
 app.listen(PORT, function() {
