@@ -7,36 +7,6 @@ mongoose.connect(
   "mongodb://localhost/onlineproducts"
 );
 
-const userSeed = [
-  {
-    name: "Luke Paschka",
-    email: "lpaschka@emaildomain.com",
-    password: "45",
-    phone: "763-555-5555",
-    address: "1234 declarathumbwar dr",
-  }
-];
-
-db.User
-  .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
-
-
-// Users:
-// username
-// password
-// email
-// phone
-// address
-
 const productsSeed = [
   {
     productImage: "queso.png",
@@ -51,7 +21,7 @@ const productsSeed = [
 
 db.Products
   .remove({})
-  .then(() => db.Products.collection.insertMany(productsSeed))
+  .then(() => db.Book.collection.insertMany(productsSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
@@ -60,3 +30,13 @@ db.Products
     console.error(err);
     process.exit(1);
   });
+
+
+  // Products (sortable):
+// product image
+// product name
+// description
+// price
+// category
+// rating/review
+// seller
