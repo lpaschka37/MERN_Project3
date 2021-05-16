@@ -2,6 +2,10 @@ h1, h2, h3 {
     color: #66FCF1;
 }
 
+h6 {
+    margin: 10px;
+}
+
 a {
     color: #66FCF1;
     text-decoration: none;
@@ -64,10 +68,10 @@ a:hover {
     color: #66fcf1;
 }
 
-/* .card-text {
+.card-text-form {
     text-align: center;
     color: #fff;
-} */
+}
 
 .form-btn {
     margin-top: 15px; 
@@ -75,12 +79,65 @@ a:hover {
     color: #fff; 
     border-radius: 8px;
     border: none;
+    padding: 8px;
 }
 
 .form-btn:hover {
     background-color: #66FCF1;
     color: black;
 }
+
+.cart-btn {
+    background-color: #45a29e;
+    color: white;
+    width: 100%;
+}
+
+.cart-btn:hover {
+    background-color: #66fcf1;
+    
+}
+
+.card-title-product {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.prod-desc {
+    overflow-y: auto;
+    max-height: 85px;
+    background-color: #e0e0e0;
+    padding: 8px;
+
+}
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:0%;
+    content: attr(data-count);
+    font-size:40%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    color:$shopping-cart-red;
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+    background: white;
+    border-style:solid;
+  }
+  
+  .fa-circle {
+    color:#DF0000;
+  }
 
 
 .carousel-item {
