@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// Still working on seed files
+// Still working on product seed files. Will request products for all store fronts
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/onlineproducts"
@@ -11,10 +11,32 @@ const userSeed = [
   {
     name: "Luke Paschka",
     email: "lpaschka@emaildomain.com",
-    password: "45",
+    password: "123456abc",
     phone: "763-555-5555",
-    address: "1234 declarathumbwar dr",
+    address: "1234 declarathumbwar dr, Minneapolis MN 55555",
+  },
+  {
+    name: "Kelsie Lewis",
+    email: "klewis@emaildomain.com",
+    password: "123456abc",
+    phone: "763-555-5555",
+    address: "1234 declarathumbwar dr, Minneapolis MN 55555",
+  },
+  {
+    name: "Nathan Henteges",
+    email: "nhenteges@emaildomain.com",
+    password: "123456abc",
+    phone: "763-555-5555",
+    address: "1234 declarathumbwar dr, Minneapolis MN 55555",
+  },
+  {
+    name: "Saranya Dayalan",
+    email: "sdayalan@emaildomain.com",
+    password: "123456abc",
+    phone: "763-555-5555",
+    address: "1234 declarathumbwar dr, Minneapolis MN 55555",
   }
+
 ];
 
 db.User
