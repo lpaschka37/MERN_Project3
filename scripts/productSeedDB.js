@@ -4,7 +4,7 @@ const db = require("../models");
 // Still working on seed files
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/onlineproducts"
 );
 
 const productsSeed = [
