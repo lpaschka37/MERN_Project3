@@ -1,7 +1,6 @@
 import React from "react";
-
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
-import Products from "../components/Products/Products"
+import Products from "../components/Products/Products";
 
 
 function ProductListPage(props){
@@ -20,7 +19,7 @@ const partyItems = [
     "description":"Party ballons to pop",
     "price":"2$",
     "seller":"Dollar Tree",
-    "rating":"3"
+    "rating":3
     },
     {
     "productImage":"",

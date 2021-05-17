@@ -19,8 +19,9 @@ function ProductDetails(props) {
           
           <div className="modal-body">
                 <div><img src={clickedProductDetails.productImage} class="card-img-top" alt="..." /></div>
-                <div>{clickedProductDetails.price}</div>
+                <div><strong>Price:</strong> {clickedProductDetails.price}</div>
                 <div>
+                  <strong>Rating:</strong>
                     <StarRatingComponent 
                         name="rate2" 
                         editing={false}
@@ -29,7 +30,7 @@ function ProductDetails(props) {
                         value={clickedProductDetails.rating}  
                     />
                 </div>
-                <div>{clickedProductDetails.description}</div>
+                <div><strong>Description: </strong>{clickedProductDetails.description}</div>
             </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-primary">
