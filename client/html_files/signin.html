@@ -18,17 +18,17 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a  class="navbar-brand" style="color:#66FCF1" href="home.html"><i style="padding-right: 15px;" class="fas fa-store-alt"></i>Garyphenalia</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a  class="navbar-brand" style="color:#66FCF1" href="home.html"><i style="padding-right: 15px;" class="fas fa-store-alt"></i>Garyphernalia</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <ul class="nav top-nav justify-content-end">          
           <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fas fa-record-vinyl"></i><i class="fas fa-align-justify"></i>  Categories</a>
             <ul class="dropdown-menu custom-drop">
               <li class="list-custom"><a class="dropdown-item" href="category1.html">Vinyl</a></li>
-              <li><a class="dropdown-item list-custom" href="category2.html">Green Stuff</a></li>
-              <li><a class="dropdown-item list-custom" href="category3.html">Nathan</a></li>
+              <li><a class="dropdown-item list-custom" href="category2.html">Random Stuff</a></li>
+              <li><a class="dropdown-item list-custom" href="category3.html">Board Games</a></li>
               <li><a class="dropdown-item list-custom" href="category4.html">Party Supplies</a></li>              
             </ul>
           </li>
@@ -62,88 +62,77 @@
   </section>
 
   <div class="album py-5 bg-dark-custom">
-    <div class="container">
-      <!-- row columns start here -->
-      <div id="" class="row">          
-        <div style="margin-right:25px" class="custom-card-dark col-lg-5 col-md-10 col-sm-12">
-        <!-- <img src="./assets/images/Jordan_Pond.jpg" class="card-img-height card-img-top" alt="placeholder"> -->
-          <div class="card-body">                        
-            <h4 class="card-title">Sign In</h4>
-              <p class="card-text-form">Sign in with your username and password to complete your transaction.</p>
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="card shadow-sm mb-4">            
+            <div class="card-body custom-card-dark">
+              <h4 class="card-title">Sign In</h4>
+                <p class="card-text-form">Sign in with your username and password to complete your transaction.</p>
+                  <form style="color: #fff;">
+                    <div class="row">
+                      <label for="inputUN" class="col-sm-4 col-form-label">User Name</label>
+                    <div class="col-sm-12">
+                      <input type="username" class="form-control" id="inputUN">
+                    </div>
+                </div>
+                <div class="row">
+                  <label for="inputPW" class="col-sm-4 col-form-label">Password</label>
+                    <div class="col-sm-12">
+                      <input type="password" class="form-control" id="inputPW">
+                    </div>
+                </div>
+                  <button type="submit" class="home-btn form-btn">Sign in</button>                    
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="card h-200 shadow-sm mb-4">            
+            <div class="card-body custom-card-dark">
+              <h4 class="card-title">Create a User</h4>
+                <p class="card-text-form">First time? You will need to create a user in order to complete your transaction.</p>
                 <form style="color: #fff;">
                   <div class="row">
-                    <label for="inputUN" class="col-sm-4 col-form-label">User Name</label>
-                      <div class="col-sm-12">
-                        <input type="username" class="form-control" id="inputUN">
-                      </div>
+                    <label for="inputUN" class="col-sm-4 col-form-label">Username</label>
+                    <div class="col-sm-12">
+                      <input type="username" class="form-control" id="inputUN">
+                    </div>
                   </div>
                   <div class="row">
                     <label for="inputPW" class="col-sm-4 col-form-label">Password</label>
-                      <div class="col-sm-12">
-                        <input type="password" class="form-control" id="inputPW">
-                      </div>
+                    <div class="col-sm-12">
+                      <input type="password" class="form-control" id="inputPW">
+                    </div>
+                  </div> 
+                  <div class="row">
+                    <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-12">
+                      <input type="email" class="form-control" id="inputEmail">
+                    </div>
                   </div>
-                    <button type="submit" class="home-btn form-btn">Sign in</button>                    
-                </form>
-              </div>
+                  <!-- <div class="row">
+                    <label for="inputPH" class="col-sm-4 col-form-label">Phone</label>
+                    <div class="col-sm-12">
+                      <input type="phone" class="form-control" id="inputPH">
+                    </div>
+                  </div>                                  -->
+                  <button type="submit" class="home-btn form-btn">Create user</button>
+              </form>
+            </div>
           </div>
-          <div style="margin-left:25px" class="custom-card-dark col-lg-5 col-md-10 col-sm-12">
-            <!-- <img src="./assets/images/Jordan_Pond.jpg" class="card-img-height card-img-top" alt="placeholder"> -->
-              <div class="card-body">                        
-                <h4 class="card-title">Create a User</h4>
-                  <p class="card-text-form">First time? You will need to create a user in order to complete your transaction.</p>
-                  <form style="color: #fff;">
-                    <div class="row">
-                      <label for="inputFN" class="col-sm-4 col-form-label">Full Name</label>
-                      <div class="col-sm-12">
-                        <input type="fullname" class="form-control" id="inputFN">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
-                      <div class="col-sm-12">
-                        <input type="email" class="form-control" id="inputEmail">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <label for="inputPH" class="col-sm-4 col-form-label">Phone</label>
-                      <div class="col-sm-12">
-                        <input type="phone" class="form-control" id="inputPH">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <label for="inputAddress" class="col-sm-4 col-form-label">Address</label>
-                      <div class="col-sm-12">
-                        <input type="address" class="form-control" id="inputAddress">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <label for="inputUN" class="col-sm-4 col-form-label">Username</label>
-                      <div class="col-sm-12">
-                        <input type="username" class="form-control" id="inputUN">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <label for="inputPW" class="col-sm-4 col-form-label">Password</label>
-                      <div class="col-sm-12">
-                        <input type="password" class="form-control" id="inputPW">
-                      </div>
-                    </div>                
-                    <button type="submit" class="home-btn form-btn">Create user</button>
-                </form>
-                  </div>
-              </div>      
+        </div>
       </div>
     </div>
-</div>
-
+  </div>
 </main>
 
 <footer class="text-muted py-5 bg-dark">
   <div class="container">
-    <p class="float-end mb-1">
+    <!-- <p class="float-end mb-1">
       <a href="#"><i style="font-size: 25px;" class="fas fa-arrow-circle-up"></i></a>
-    </p>
+    </p> -->
     <p style="color: white;" class="mb-1">&copy;2021 University of Minnesota - Fullstack Bootcamp</p>
     <!-- <p class="mb-0"></p> -->
   </div>
