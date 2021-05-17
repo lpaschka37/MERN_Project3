@@ -10,7 +10,8 @@ function App() {
 
   return (
     <div>
-   
+      
+      <Header />
       <ProductListPage />
       <CheckOut />
       
