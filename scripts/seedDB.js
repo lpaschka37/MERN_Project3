@@ -7,6 +7,67 @@ mongoose.connect(
   "mongodb://localhost/onlineproducts"
 );
 
+const productsSeed = [
+  {
+    productImage: "queso.png",
+    productName: "Queso",
+    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",    
+    price: 2.49,
+    seller: "Garyphanalia",
+    rating: 5,
+    category: "Food"
+  }, 
+  {
+    productImage: "twentyone.png",
+    productName:  "Graduation hats 2021",
+    description: "A graduation hats for 2021.Add a special touch to the graduation celebration",
+    price: 10.00,
+    seller: "Me",
+    rating: 3,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "balloons.png",
+    productName: "Balloons ",
+    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",
+    price: 5.00,
+    seller: "Me",
+    rating: 3,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "sixtieth.png",
+    productName: "Number Balloons",
+    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",    
+    price: 5.00,
+    seller: "Me",
+    rating: 3,
+    category: "Party supplies"
+  },
+  {
+    productImage: "hatmaskcake.png",
+    productName: " Rotating cake with party hats",
+    description: " Magic spin birthday cake with hats and masks",    
+    price: 15.00,
+    seller: "Me",
+    rating: 4,
+    category: "Party supplies"
+  }
+];
+
+db.Products
+  .remove({})
+  .then(() => db.Products.collection.insertMany(productsSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+
 const userSeed = [
   {
     name: "Luke Paschka",
@@ -60,62 +121,3 @@ db.User
 // address
 
 
-const productsSeed = [
-  {
-    productImage: "queso.png",
-    productName: "Queso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",    
-    price: 2.49,
-    seller: "Garyphanalia",
-    rating: 5,
-    category: "Food"
-  }, 
-  {
-    productImage: "twentyone.png",
-    productName:  "Graduation hats 2021",
-    description: "A graduation hats for 2021.Add a special touch to the graduation celebration",
-    price: 10.00,
-    seller: "Me",
-    rating: 3,
-    category: "Party Supplies"
-  },
-  {
-    productImage: "balloons.png",
-    productName: "Balloons ",
-    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",
-    price: 5.00,
-    seller: "Me",
-    rating: 3,
-    category: "Party Supplies"
-  },
-  {
-    productImage: "sixtieth.png",
-    productName: "Number Balloons",
-    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",    
-    price: 5.00,
-    seller: "Me",
-    rating: 3,
-    category: "Party supplies"
-  },
-  {
-    productImage: "hatmaskcake.png",
-    productName: " Rotating cake with party hats",
-    description: " Magic spin birthday cake with hats and masks",    
-    price: 15.00,
-    seller: "Me",
-    rating: 4,
-    category: "Party supplies"
-  }
-];
-
-db.Products
-  .remove({})
-  .then(() => db.Book.collection.insertMany(productsSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });

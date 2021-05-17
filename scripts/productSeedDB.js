@@ -27,7 +27,7 @@ db.Products
     process.exit(0);
   })
   .catch(err => {
-    console.error(err);
+    console.error("errrer");
     process.exit(1);
   });
 
