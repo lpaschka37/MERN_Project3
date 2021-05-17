@@ -34,6 +34,17 @@ a:hover {
 
 }
 
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -2);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -8);
+}
+
 .hero {
     /* background-image: linear-gradient(#002897, #ebccff); */
     background-image: url("../src/images/dark_wrinkle2.jpg");
@@ -147,9 +158,10 @@ a:hover {
     width: 100%;
     height: 400px;
     margin-right: -100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform .6s ease-in-out;
+    background-position: center;
+    background-size: cover;
 }
 
 .carousel-caption {
@@ -163,3 +175,16 @@ a:hover {
     text-align: center;
 }
 
+.badge {
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    background-color: #66fcf1;
+}
