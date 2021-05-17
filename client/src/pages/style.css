@@ -37,13 +37,16 @@ a:hover {
   margin-right: 30px;
 }
 
-.custom-drop {
-    background-color: #212529 ;
+.dropdown-menu {
+  background-color: #212529 ;
+}
+
+.dropdown-menu a:focus, .dropdown-menu a:hover, .dropdown-menu a:active {
+  background-color: #212529 !important;
 }
 
 .list-custom:hover {
-    color: #212529;
-
+  color: #212529;
 }
 
 .hero {

@@ -10,7 +10,7 @@ function NavTop() {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
       <Nav className="top-nav">
-        <NavDropdown title={<div style={{ display: "inline-block" }}><i className="fas fa-align-justify"></i>  Categories</div>} className="custom-drop" id="collapsible-nav-dropdown">
+        <NavDropdown title={<a className="primary-col"><i className="fas fa-align-justify"></i>  Categories</a>} className="custom-drop" id="collapsible-nav-dropdown">
           <NavDropdown.Item href="#action/1.1">Vinyl</NavDropdown.Item>
           <NavDropdown.Item href="#action/1.2">Green Stuff</NavDropdown.Item>
           <NavDropdown.Item href="#action/1.3">Nathan</NavDropdown.Item>
