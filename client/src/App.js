@@ -10,11 +10,11 @@ import ProductListPage  from "./pages/Category4";
 import CheckOut from "./pages/Checkout";
 // import SignIn from "./pages/Signin";
 
-
-  
+import Home from "./pages/Home";
+// import ProductListPage  from "./pages/Category4";
+// import CheckOut from "./pages/Checkout";
 
 function App() {
-
   return (
 
   <Router>
