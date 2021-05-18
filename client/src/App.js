@@ -17,7 +17,6 @@ import CheckOut from "./pages/Checkout";
 
 function App() {
   return (
-
   <Router>
     <NavTop />
     <Route exact path="/" component={Home} />
