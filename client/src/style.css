@@ -11,16 +11,12 @@ a {
     text-decoration: none;
 }
 
-.primary-col {
-  color: #66FCF1 !important;
-}
-
 a:hover {
-    color: #fff !important;
+    color: #fff;
     text-shadow: 0px 0px 8px #66FCF1;
 }
 
-.top-nav a, a.navbar-brand {
+.top-nav a {
     color: #66FCF1;
 }
 
@@ -29,40 +25,18 @@ a:hover {
     text-shadow: 0px 0px 8px #66FCF1;
 }
 
-.top-nav a:focus {
-    color: #66FCF1;
-}
-
-.navbar-brand i {
-  margin-right: 30px;
-}
-
-.dropdown-menu {
-  background-color: #212529 ;
-}
-
-.dropdown-menu a:focus, .dropdown-menu a:hover, .dropdown-menu a:active {
-  background-color: #212529 !important;
+.custom-drop {
+    background-color: #212529 ;
 }
 
 .list-custom:hover {
-  color: #212529;
-}
+    color: #212529;
 
-
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -2);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -8);
 }
 
 .hero {
     /* background-image: linear-gradient(#002897, #ebccff); */
-    background-image: url("../images/dark_wrinkle2.jpg");
+    background-image: url("../src/images/dark_wrinkle2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -153,9 +127,10 @@ a:hover {
     border-radius:999px;
     line-height:.75em;
     color: white;
+    color:$shopping-cart-red;
     text-align:center;
-    min-width: 2em;
-    font-weight: bold;
+    min-width:2em;
+    font-weight:bold;
     background: white;
     border-style:solid;
   }
@@ -172,10 +147,9 @@ a:hover {
     width: 100%;
     height: 400px;
     margin-right: -100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform .6s ease-in-out;
-    background-position: center;
-    background-size: cover;
 }
 
 .carousel-caption {
@@ -189,16 +163,3 @@ a:hover {
     text-align: center;
 }
 
-.badge {
-    display: inline-block;
-    padding: .35em .65em;
-    font-size: .75em;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    background-color: #66fcf1;
-}
