@@ -1,18 +1,16 @@
 /* eslint-disable no-lone-blocks */
 
-{/*this file is currently not in use - delete before final deploy */}
-
 import React from "react";
 import "../../style.css";
 
+{ /* this file is currently not in use - delete before final deploy */ }
 
-function Navbar(props) {
-    return (
+function Navbar() {
+  return (
         <header>
           {/* currently not in use - delete before final deploy */}
         </header>
-    );
+  );
 }
 
 export default Navbar;
-

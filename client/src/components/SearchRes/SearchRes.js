@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 
-function SearchRes(props) {   
-    return (
+function SearchRes(props) {
+  return (
         <tbody>
-            {props.results.filter(search => {
-                let name = search.name.toLowerCase();
-                let searchName = props.value.toLowerCase()
-                let result = name.includes(searchName)
-               return result
-            }).map(result => (
-                <tr>                    
+            {props.results.filter((search) => {
+              const name = search.name.toLowerCase();
+              const searchName = props.value.toLowerCase();
+              const result = name.includes(searchName);
+              return result;
+            }).map((result) => (
+                <tr>
                     <td data-th="name">
                     {result.name}
                     </td>
@@ -22,11 +22,11 @@ function SearchRes(props) {
                     </td>
                     <td data-th="role">
                         {result.role}
-                    </td>                    
+                    </td>
                 </tr>
             ))}
         </tbody>
-    );
+  );
 }
 
 export default SearchRes;

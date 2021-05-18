@@ -5,7 +5,6 @@
 // import Navbar from "../Navbar/Navbar";
 // import "./style.css";
 
-
 // class EmpTable extends Component {
 //   state = {
 //     result: [],
@@ -117,5 +116,3 @@
 // }}
 
 // export default EmpTable;
-
-
