@@ -49,6 +49,9 @@ a:hover {
   color: #212529;
 }
 
+.custom-drop {
+    background-color: #212529 !important;
+}
 
 .row {
     --bs-gutter-x: 1.5rem;

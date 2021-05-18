@@ -5,6 +5,8 @@ import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 import Products from "../components/Products/Products";
 import _ from "lodash";
 
+let ItemInCarts = []
+
 function CheckOut(props) {
   const total = _.sumBy(
     ItemInCarts,
@@ -380,6 +382,32 @@ function CheckOut(props) {
     </>
   );
 }
+// const ItemInCarts = [
+//   {
+//   "productImage":"",
+//   "productName":"Ballons",
+//   "description":"Party ballons to pop",
+//   "price":"2",
+//   "seller":"Dollar Tree",
+//   "rating":"3"
+//   },
+//   {
+//   "productImage":"",
+//   "productName":"string curls",
+//   "description":"string curls to design",
+//   "price":"5",
+//   "seller":"Party city",
+//   "rating":"4"
+//   },
+//   {
+//   "productImage":"",
+//   "productName":"pinata",
+//   "description":"Pinata to broke ",
+//   "price":"10",
+//   "seller":"Hobby Lobby",
+//   "rating":"4"
+//   },
+// ]
 
 export default CheckOut;
 
