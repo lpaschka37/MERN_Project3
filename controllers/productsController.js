@@ -3,9 +3,9 @@ const db = require("../models");
 // Defining methods for the productsController
 module.exports = {
   findAll(req, res) {
+    console.log("find all...")
     db.Products
       .find()
-      .sort({ date: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },

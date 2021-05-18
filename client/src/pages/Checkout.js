@@ -5,6 +5,8 @@ import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 import Products from "../components/Products/Products";
 import _ from "lodash";
 
+let ItemInCarts = [];
+
 function CheckOut(props) {
   const total = _.sumBy(
     ItemInCarts,
