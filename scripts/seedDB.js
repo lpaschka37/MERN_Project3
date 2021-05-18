@@ -19,10 +19,73 @@ const productsSeed = [
   }, 
   {
     productImage: "twentyone.png",
+    productName:  "Vintage Dude",
+    description: "The man the myth and the legend can all dine in style",
+    price: 2.00,
+    seller: "saranya",
+    rating: 5,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "oilshop.png",
+    productName:  "Goodbye Yellow Brick Road by Elton John",
+    description: "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
+    price: 28.00,
+    seller: "Luke",
+    rating: 5,
+    category: "Vinyl"
+  },
+  {
+    productImage: "twentyone.png",
+    productName:  "The Dark Side of the Moon by Pink Floyd",
+    description: "An all-time great, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
+    price: 38.00,
+    seller: "Luke",
+    rating: 5,
+    category: "Vinyl"
+  },
+  {
+    productImage: "twentyone.png",
+    productName:  "The Black Album by Prince",
+    description: "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
+    price: 325.00,
+    seller: "Luke",
+    rating: 5,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "twentyone.png",
+    productName:  " Black Star by David Bowie",
+    description: "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
+    price: 31.00,
+    seller: "Luke",
+    rating: 5,
+    category: "Vinyl"
+  },
+  {
+    productImage: "twentyone.png",
+    productName:  "Pinata",
+    description: "Perfect activity for any age celebration",
+    price: 10.00,
+    seller: "Saranya",
+    rating: 4,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "twentyone.png",
+    productName:  "String Curls",
+    description: "For any celebration",
+    price: 5.00,
+    seller: "Saranya",
+    rating: 4,
+    category: "Party Supplies"
+  },
+  {
+    productImage: "twentyone.png",
     productName:  "Graduation hats 2021",
     description: "A graduation hats for 2021.Add a special touch to the graduation celebration",
     price: 10.00,
-    seller: "Me",
+    seller: "Saranya",
     rating: 3,
     category: "Party Supplies"
   },
@@ -31,7 +94,7 @@ const productsSeed = [
     productName: "Balloons ",
     description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",
     price: 5.00,
-    seller: "Me",
+    seller: "Saranya",
     rating: 3,
     category: "Party Supplies"
   },
@@ -40,7 +103,7 @@ const productsSeed = [
     productName: "Number Balloons",
     description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",    
     price: 5.00,
-    seller: "Me",
+    seller: "Saranya",
     rating: 3,
     category: "Party supplies"
   },
@@ -49,7 +112,7 @@ const productsSeed = [
     productName: " Rotating cake with party hats",
     description: " Magic spin birthday cake with hats and masks",    
     price: 15.00,
-    seller: "Me",
+    seller: "Saranya",
     rating: 4,
     category: "Party supplies"
   }
