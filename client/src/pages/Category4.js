@@ -6,8 +6,13 @@ import Products from "../components/Products/Products";
 function ProductListPage(props){
     return(
         <>
-            <CategoryJumbotron />
-            <Products productList={partyItems}/>
+            <CategoryJumbotron title={'Welcome to party supply page'} subtitle={'Please select from party supplies below and add to cart.'}/>
+                <div class="album py-5 bg-dark-custom">
+                    <div class="container">
+                        <Products productList={partyItems}/>
+                    </div>
+                </div>
+            
         </>
     );
 }

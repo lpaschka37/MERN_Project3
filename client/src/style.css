@@ -1,0 +1,165 @@
+h1, h2, h3 {
+    color: #66FCF1;
+}
+
+h6 {
+    margin: 10px;
+}
+
+a {
+    color: #66FCF1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 8px #66FCF1;
+}
+
+.top-nav a {
+    color: #66FCF1;
+}
+
+.top-nav a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 8px #66FCF1;
+}
+
+.custom-drop {
+    background-color: #212529 ;
+}
+
+.list-custom:hover {
+    color: #212529;
+
+}
+
+.hero {
+    /* background-image: linear-gradient(#002897, #ebccff); */
+    background-image: url("../src/images/dark_wrinkle2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.icon {
+    font-size: 150px;
+    text-align: center;
+    
+ }
+
+ .icon:hover {
+    color: #fff;
+     text-decoration: none;
+     cursor: pointer;
+     text-shadow: 0px 0px 10px #66FCF1;
+ }
+
+.bg-dark-custom {
+    background-color: #c4c4c4;
+}
+
+.custom-card-dark {
+    background-color: #1F2833;
+}
+
+.card-title {
+    text-align: center;
+    color: #66fcf1;
+}
+
+.card-text-form {
+    text-align: center;
+    color: #fff;
+}
+
+.form-btn {
+    margin-top: 15px; 
+    background-color:#45a29e; 
+    color: #fff; 
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+.form-btn:hover {
+    background-color: #66FCF1;
+    color: black;
+}
+
+.cart-btn {
+    background-color: #45a29e;
+    color: white;
+    width: 100%;
+}
+
+.cart-btn:hover {
+    background-color: #66fcf1;
+    
+}
+
+.card-title-product {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: scale-down;
+}
+
+.prod-desc {
+    overflow-y: auto;
+    max-height: 85px;
+    background-color: #e0e0e0;
+    padding: 8px;
+
+}
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:0%;
+    content: attr(data-count);
+    font-size:40%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    color:$shopping-cart-red;
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+    background: white;
+    border-style:solid;
+  }
+  
+  .fa-circle {
+    color:#DF0000;
+  }
+
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 400px;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 8.0rem;
+    color: #fff;
+    text-align: center;
+}
+

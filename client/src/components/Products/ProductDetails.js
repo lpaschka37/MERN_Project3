@@ -47,4 +47,7 @@ function ProductDetails(props) {
 
 export default ProductDetails;
 
-//Created by Saranya for PDP(product detail page)
+
+//No need of this page can delete later
+
+
