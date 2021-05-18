@@ -1,10 +1,11 @@
 import React from "react";
-import "./style.css";
+import "../src/pages/style.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import HomePage from "./components/HomePage/Homepage";
 import Header from "./components/Header/Header";
+import NavTop from "./components/NavTop/NavTop";
 import Footer from "./components/Footer/Footer"
 import ProductListPage  from "./pages/Category4";
 import CheckOut from "./pages/Checkout";
@@ -18,7 +19,7 @@ function App() {
   return (
 
   <Router>
-     <Header />
+     <NavTop />
         {/* <Route exact path="/" component={HomePage} /> */}
         <Route exact path="/productlistpage" component={ProductListPage} />
         <Route exact path="/checkout" component={CheckOut} />
