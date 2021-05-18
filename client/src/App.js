@@ -17,17 +17,17 @@ import CheckOut from "./pages/Checkout";
 
 function App() {
   return (
-  <Router>
-    <NavTop />
-    <Route exact path="/" component={Home} />
-    <Route exact path="/vinyl" component={Vinyl} />
-    <Route exact path="/green" component={Green} />
-    <Route exact path="/games" component={Games} />
-    <Route exact path="/party" component={Party} />
-    <Route exact path="/signin" component={SignIn} />
-    <Route exact path="/checkout" component={CheckOut} />
-    <Footer />
-  </Router>
+    <Router>
+      <NavTop />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/vinyl" component={Vinyl} />
+      <Route exact path="/green" component={Green} />
+      <Route exact path="/games" component={Games} />
+      <Route exact path="/party" component={Party} />
+      <Route exact path="/signin" component={SignIn} />
+      <Route exact path="/checkout" component={CheckOut} />
+      <Footer />
+    </Router>
   );
 }
 

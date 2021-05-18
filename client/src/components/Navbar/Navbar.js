@@ -7,9 +7,9 @@ import "../../style.css";
 
 function Navbar() {
   return (
-        <header>
-          {/* currently not in use - delete before final deploy */}
-        </header>
+    <header>
+      {/* currently not in use - delete before final deploy */}
+    </header>
   );
 }
 

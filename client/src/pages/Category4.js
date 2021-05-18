@@ -9,11 +9,11 @@ function ProductListPage(props) {
   return (
     <>
       <CategoryJumbotron title={"Welcome to party supply page"} subtitle={"Please select from party supplies below and add to cart."}/>
-          <div className="album py-5 bg-dark-custom">
-              <div className="container">
-                  <Products productList={partyItems}/>
-              </div>
-          </div>
+      <div className="album py-5 bg-dark-custom">
+        <div className="container">
+          <Products productList={partyItems}/>
+        </div>
+      </div>
 
     </>
   );
