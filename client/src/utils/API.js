@@ -17,5 +17,24 @@ export default {
   // Saves a user to the database
   saveUsers(userData) {
     return axios.post("/api/users", userData);
-  }
+  },
+  // Gets all Products
+  getProducts: async function() {
+    console.log("api here")
+    const dataGet = await axios.get("/api/products");
+    console.log("API:", dataGet);
+    return dataGet;
+  },
+  // Gets specific product with the given id
+  // getProduct: function(id) {
+  //   return axios.get("/api/products/" + id);
+  // },
+  // // Deletes the product with the given id
+  // deleteProducts: function(id) {
+  //   return axios.delete("/api/products/" + id);
+  // },
+  // // Saves a product to the database
+  // saveProducts: function(productData) {
+  //   return axios.post("/api/products", productData);
+  // }
 };

@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the productsController
 module.exports = {
   findAll(req, res) {
+    console.log("find all...")
     db.Products
       .find()
       .then((dbModel) => res.json(dbModel))
