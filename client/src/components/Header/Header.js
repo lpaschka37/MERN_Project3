@@ -8,7 +8,7 @@ function Header() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a  className="navbar-brand" style={{color:"#66FCF1"}} href="home.html"><i style="padding-right: 15px;" className="fas fa-store-alt"></i>Garyphernalia</a>
+                <a className="navbar-brand" style={{color:"#66FCF1"}} href="home.html"><i style={{paddingRight: "15px"}} className="fas fa-store-alt"></i>Garyphernalia</a>
                     {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button> */}
@@ -23,7 +23,7 @@ function Header() {
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="checkout.html"><i className="fas fa-shopping-cart"></i>  Cart</a>
+                    <a className="nav-link" href="/checkout"><i className="fas fa-shopping-cart"></i>  Cart</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="signin.html" tabindex="-1" aria-disabled="true"><i className="fas fa-user"></i>  Login</a>
