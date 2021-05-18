@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 const routes = require("./routes");
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -18,12 +20,12 @@ if (process.env.NODE_ENV === "production") {
 
 // Add routes, both API and view
 app.use(routes);
-app.use("*", function(req, res) {
+app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   console.log(`:earth_americas:  ==> API Server now listening on PORT ${PORT}!`);
 });

@@ -1,11 +1,14 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
+// TODO: needs finishing
+
 import React from "react";
+import _ from "lodash";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
-
 import Products from "../components/Products/Products";
-import _ from "lodash";
 
-let ItemInCarts = []
+const ItemInCarts = [];
 
 function CheckOut(props) {
   const total = _.sumBy(
@@ -29,10 +32,10 @@ function CheckOut(props) {
               <div style={{ color: "white" }} className="card shadow-sm">
                 <div className="custom-card-dark p-4">
                   <h3 className="mb-3">Billing address</h3>
-                  <form className="needs-validation" novalidate>
+                  <form className="needs-validation" noValidate>
                     <div className="row">
                       <div className="col-md-6 mb-3">
-                        <label for="firstName">First name</label>
+                        <label htmlFor="firstName">First name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -46,7 +49,7 @@ function CheckOut(props) {
                         </div>
                       </div>
                       <div className="col-md-6 mb-3">
-                        <label for="lastName">Last name</label>
+                        <label htmlFor="lastName">Last name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -62,7 +65,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="mb-3">
-                      <label for="username">Username</label>
+                      <label htmlFor="username">Username</label>
                       <div className="input-group">
                         <div className="input-group-prepend">
                           <span className="input-group-text">@</span>
@@ -84,7 +87,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="mb-3">
-                      <label for="email">
+                      <label htmlFor="email">
                         Email <span className="text-muted">(Optional)</span>
                       </label>
                       <input
@@ -99,7 +102,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="mb-3">
-                      <label for="address">Address</label>
+                      <label htmlFor="address">Address</label>
                       <input
                         type="text"
                         className="form-control"
@@ -113,7 +116,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="mb-3">
-                      <label for="address2">
+                      <label htmlFor="address2">
                         Address 2 <span className="text-muted">(Optional)</span>
                       </label>
                       <input
@@ -126,7 +129,7 @@ function CheckOut(props) {
 
                     <div className="row">
                       <div className="col-md-5 mb-3">
-                        <label for="country">Country</label>
+                        <label htmlFor="country">Country</label>
                         <select
                           className="custom-select d-block w-100"
                           id="country"
@@ -140,7 +143,7 @@ function CheckOut(props) {
                         </div>
                       </div>
                       <div className="col-md-4 mb-3">
-                        <label for="state">State</label>
+                        <label htmlFor="state">State</label>
                         <select
                           className="custom-select d-block w-100"
                           id="state"
@@ -168,7 +171,7 @@ function CheckOut(props) {
                         </div>
                       </div>
                       <div className="col-md-3 mb-3">
-                        <label for="zip">Zip</label>
+                        <label htmlFor="zip">Zip</label>
                         <input
                           type="text"
                           className="form-control"
@@ -186,7 +189,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         id="same-address"
                       />
-                      <label className="custom-control-label" for="same-address">
+                      <label className="custom-control-label" htmlFor="same-address">
                         Shipping address is the same as my billing address
                       </label>
                     </div>
@@ -196,7 +199,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         id="save-info"
                       />
-                      <label className="custom-control-label" for="save-info">
+                      <label className="custom-control-label" htmlFor="save-info">
                         Save this information for next time
                       </label>
                     </div>
@@ -224,7 +227,7 @@ function CheckOut(props) {
                         checked
                         required
                       />
-                      <label className="custom-control-label" for="credit">
+                      <label className="custom-control-label" htmlFor="credit">
                         Credit card
                       </label>
                     </div>
@@ -236,7 +239,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         required
                       />
-                      <label className="custom-control-label" for="free">
+                      <label className="custom-control-label" htmlFor="free">
                         Free
                       </label>
                     </div>
@@ -248,14 +251,14 @@ function CheckOut(props) {
                         className="custom-control-input"
                         required
                       />
-                      <label className="custom-control-label" for="Make an offer">
+                      <label className="custom-control-label" htmlFor="Make an offer">
                         Dodge Coin
                       </label>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-md-6 mb-3">
-                      <label for="cc-name">Name on card</label>
+                      <label htmlFor="cc-name">Name on card</label>
                       <input
                         type="text"
                         className="form-control"
@@ -271,7 +274,7 @@ function CheckOut(props) {
                       </div>
                     </div>
                     <div className="col-md-6 mb-3">
-                      <label for="cc-number">Credit card number</label>
+                      <label htmlFor="cc-number">Credit card number</label>
                       <input
                         type="text"
                         className="form-control"
@@ -286,7 +289,7 @@ function CheckOut(props) {
                   </div>
                   <div className="row">
                     <div className="col-md-3 col-sm-6 mb-3">
-                      <label for="cc-expiration">Expiration</label>
+                      <label htmlFor="cc-expiration">Expiration</label>
                       <input
                         type="text"
                         className="form-control"
@@ -299,7 +302,7 @@ function CheckOut(props) {
                       </div>
                     </div>
                     <div className="col-md-3 col-sm-6 mb-3">
-                      <label for="cc-expiration">CVV</label>
+                      <label htmlFor="cc-expiration">CVV</label>
                       <input
                         type="text"
                         className="form-control"
@@ -364,7 +367,7 @@ function CheckOut(props) {
                         {/* <div className="row">
                                             <div className="col-2"> <img src={ItemInCart.productImage} alt="..."  height="50px" width="50px" /> </div>
                                             <div className="col-6">{ItemInCart.productName} <br />Qty : {ItemInCart.addToCart.quantity}</div>
-                                            <div className="col-4 text-right d-flex justify-content-end">${(ItemInCart.price)*(ItemInCart.addToCart.quantity)}</div> 
+                                            <div className="col-4 text-right d-flex justify-content-end">${(ItemInCart.price)*(ItemInCart.addToCart.quantity)}</div>
                                         </div> */}
                       </li>
                     ))}
@@ -410,7 +413,3 @@ function CheckOut(props) {
 // ]
 
 export default CheckOut;
-
-
-
-

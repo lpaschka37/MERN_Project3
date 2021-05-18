@@ -1,31 +1,31 @@
 const mongoose = require("mongoose");
+// eslint-disable-next-line prefer-destructuring
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-  
-  productImage: { 
-    type: String, 
-    default: "" 
+  productImage: {
+    type: String,
+    default: ""
   },
-  productName: { 
-    type: String, 
-    required: true 
+  productName: {
+    type: String,
+    required: true
   },
-  description: { 
-    type: String, 
-    required: true 
+  description: {
+    type: String,
+    required: true
   },
-  price: { 
-    type: Number, 
-    required: true 
+  price: {
+    type: Number,
+    required: true
   },
-  seller: { 
-    type: String, 
-    required: true 
+  seller: {
+    type: String,
+    required: true
   },
-  rating: { 
-    type: Number, 
-    required: true 
+  rating: {
+    type: Number,
+    required: true
   },
   category: {
     type: String,
@@ -37,6 +37,4 @@ const Products = mongoose.model("Products", productSchema);
 
 module.exports = Products;
 
-
-
-//testing to push
+// testing to push
