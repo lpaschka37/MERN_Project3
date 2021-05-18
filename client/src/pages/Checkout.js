@@ -1,5 +1,7 @@
 import React from "react";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
+
+
 import Products from "../components/Products/Products";
 import _ from "lodash";
 
@@ -381,46 +383,6 @@ function CheckOut(props) {
 
 export default CheckOut;
 
-const RecentlyViewed = [
-  {
-    productImage: "",
-    productName: "Ballons",
-    description: "Party ballons to pop",
-    price: "2$",
-    seller: "Dollar Tree",
-    rating: 3,
-  },
-  {
-    productImage: "",
-    productName: "string curls",
-    description: "string curls to design",
-    price: "5$",
-    seller: "Party city",
-    rating: "4",
-  },
-];
 
-const ItemInCarts = [
-  {
-    productImage: "",
-    productName: "Ballons",
-    description: "Party ballons to pop",
-    price: 5,
-    seller: "Dollar Tree",
-    rating: 3,
-    addToCart: {
-      quantity: 3,
-    },
-  },
-  {
-    productImage: "",
-    productName: "string curls",
-    description: "string curls to design",
-    price: 5,
-    seller: "Party city",
-    rating: 4,
-    addToCart: {
-      quantity: 3,
-    },
-  },
-];
+
+
