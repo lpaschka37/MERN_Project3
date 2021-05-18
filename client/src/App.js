@@ -19,12 +19,10 @@ function App() {
 
   <Router>
      <Header />
-        
         {/* <Route exact path="/" component={HomePage} /> */}
         <Route exact path="/productlistpage" component={ProductListPage} />
         <Route exact path="/checkout" component={CheckOut} />
         {/* <Route exact path="/signin" component={SignIn} /> */}
-
       <Footer /> 
   </Router>
   );
