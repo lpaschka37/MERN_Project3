@@ -1,5 +1,5 @@
 import React from "react";
-import FontAwesome from "react-fontawesome";
+//import FontAwesome from "react-fontawesome";
 import "../../style.css";
 
 
@@ -8,7 +8,7 @@ function Header() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a  className="navbar-brand" style={{color:"#66FCF1"}} href="home.html"><i style="padding-right: 15px;" className="fas fa-store-alt"></i>Garyphernalia</a>
+                <a  className="navbar-brand" href="home.html"><i  className="fas fa-store-alt"></i>Garyphernalia</a>
                     {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button> */}

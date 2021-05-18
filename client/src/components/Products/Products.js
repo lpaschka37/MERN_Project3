@@ -1,7 +1,7 @@
 
-import React,{useState} from "react";
+//import React,{useState} from "react";
 import StarRatingComponent from 'react-star-rating-component';
-import ProductDetails from "./ProductDetails"
+//import ProductDetails from "./ProductDetails"
 
 function Products(props) {
 

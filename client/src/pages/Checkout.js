@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
-import Products from "../components/Products/Products";
+//import Products from "../components/Products/Products";
 import _ from 'lodash'
 
 function CheckOut(props) {
@@ -54,32 +54,45 @@ function CheckOut(props) {
 export default CheckOut;
 
 const RecentlyViewed = [
-    {
-    "productImage":"",
-    "productName":"Ballons",
-    "description":"Party ballons to pop",
-    "price":"2$",
-    "seller":"Dollar Tree",
-    "rating":3
-    },
-    {
-    "productImage":"",
-    "productName":"string curls",
-    "description":"string curls to design",
-    "price":"5$",
-    "seller":"Party city",
-    "rating":"4"
-    },
-]
+    
+        {
+            productImage: "balloons.png",
+            productName: "Balloons ",
+            description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",
+            price: 5.00,
+            seller: "Saranya",
+            rating: 3,
+            category: "Party Supplies"
+          },
+          {
+            productImage: "sixtieth.png",
+            productName: "Number Balloons",
+            description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",    
+            price: 5.00,
+            seller: "Saranya",
+            rating: 3,
+            category: "Party supplies"
+          },
+          {
+            productImage: "hatmaskcake.png",
+            productName: " Rotating cake with party hats",
+            description: " Magic spin birthday cake with hats and masks",    
+            price: 15.00,
+            seller: "Saranya",
+            rating: 4,
+            category: "Party supplies"
+          }
+    
+];
 
 const ItemInCarts = [
     {
     "productImage":"",
     "productName":"Ballons",
     "description":"Party ballons to pop",
-    "price":5,
+    "price":"5.00",
     "seller":"Dollar Tree",
-    "rating":3,
+    "rating":"3",
     "addToCart": {
         'quantity': 3
         }
@@ -88,11 +101,11 @@ const ItemInCarts = [
     "productImage":"",
     "productName":"string curls",
     "description":"string curls to design",
-    "price":5,
+    "price":"5.00",
     "seller":"Party city",
-    "rating":4,
+    "rating":"4",
     "addToCart": {
-        'quantity': 3
-        }
-    },
-]
+        'quantity': "3"
+    }
+    }
+];
