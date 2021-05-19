@@ -126,7 +126,7 @@ function Home() {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 col-lg-12">
               {categories.map((category) => (
                 <div className="col-lg-3 mb-3">
-                  <a href={`/${category}/productlistpage`}>
+                  <a href={`/${category}/productlist`}>
                     <div className="card custom-card-dark">
                       <div className="icon">
                         <i

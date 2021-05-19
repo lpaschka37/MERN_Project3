@@ -22,14 +22,14 @@ function ProductListPage(props) {
   useEffect(() => {
     loadProductsByCategory();
   }, []);
-  
+
   console.log(productList);
 
   return (
     <>
       <CategoryJumbotron
-        title={"Welcome to party supply page"}
-        subtitle={"Please select from party supplies below and add to cart."}
+        title={`Welcome to ${category} Products`}
+        subtitle={`Please select from ${category} below and add to cart.`}
       />
       <div class="album py-5 bg-dark-custom">
         <div class="container">

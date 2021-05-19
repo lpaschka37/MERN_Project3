@@ -70,7 +70,7 @@ a.navbar-brand {
 
 .hero {
   /* background-image: linear-gradient(#002897, #ebccff); */
-  /* background-image: url("/images/dark_wrinkle2.jpg"); */
+  /* background-image: url("dark_wrinkle2.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
