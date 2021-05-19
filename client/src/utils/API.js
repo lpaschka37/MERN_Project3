@@ -3,22 +3,21 @@ import axios from "axios";
 
 export default {
   // Gets all users
-  getUsers: function () {
+  getUsers() {
     return axios.get("/api/users");
   },
   // Gets specific user with the given id
-  getUser: function (id) {
-    return axios.get("/api/users/" + id);
+  getUser(id) {
+    return axios.get(`/api/users/${id}`);
   },
   // Deletes the user with the given id
-  deleteUsers: function (id) {
-    return axios.delete("/api/users/" + id);
+  deleteUsers(id) {
+    return axios.delete(`/api/users/${id}`);
   },
   // Saves a user to the database
-  saveUsers: function (userData) {
+  saveUsers(userData) {
     return axios.post("/api/users", userData);
   },
-
   // Gets all Products
   getProducts: async function () {
     console.log("api here");

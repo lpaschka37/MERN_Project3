@@ -3,8 +3,6 @@ import "../src/pages/style.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import API from "./utils/API";
-
 //import HomePage from "./components/HomePage/Homepage";
 import Home from "./pages/Home";
 import NavTop from "./components/NavTop/NavTop";

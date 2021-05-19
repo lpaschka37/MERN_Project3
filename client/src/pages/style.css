@@ -22,26 +22,29 @@ a:hover {
   text-shadow: 0px 0px 8px #66fcf1;
 }
 
-.top-nav a,
-a.navbar-brand {
-  color: #66fcf1;
+.top-nav a, a.navbar-brand {
+    color: #66FCF1 !important;
 }
 
 .top-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0px 0px 8px #66fcf1;
+    color: #ffffff !important;
+    text-shadow: 0px 0px 8px #66FCF1;
+}
+
+.custom-drop {
+    background-color: #212529 !important;
 }
 
 .top-nav a:focus {
-  color: #66fcf1;
+    color: #66FCF1 !important;
 }
 
 .navbar-brand i {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .dropdown-menu {
-  background-color: #212529;
+  background-color: #212529 !important ;
 }
 
 .dropdown-menu a:focus,
@@ -52,10 +55,6 @@ a.navbar-brand {
 
 .list-custom:hover {
   color: #212529;
-}
-
-.custom-drop {
-  background-color: #212529 !important;
 }
 
 .row {
@@ -108,27 +107,44 @@ a.navbar-brand {
 }
 
 .form-btn {
-  margin-top: 15px;
-  background-color: #45a29e;
-  color: #fff;
-  border-radius: 8px;
-  border: none;
-  padding: 8px;
+    margin-top: 15px;
+    margin-right: 15px; 
+    background-color:#45a29e !important; 
+    color: #fff !important; 
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
 }
 
 .form-btn:hover {
-  background-color: #66fcf1;
-  color: black;
+    background-color: #66FCF1 !important;
+    color: black !important;
+}
+
+.cancel-btn {
+    margin-top: 15px;
+    margin-right: 15px; 
+    background-color:#f32121 !important; 
+    color: #fff !important; 
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+.cancel-btn:hover {
+    background-color: #ff5555 !important;
+    color: black !important;
 }
 
 .cart-btn {
-  background-color: #45a29e;
-  color: white;
-  width: 100%;
+    background-color: #45a29e !important;
+    color: white;
+    width: 100%;
 }
 
 .cart-btn:hover {
-  background-color: #66fcf1;
+    background-color: #66fcf1 !important;
+    
 }
 
 .card-title-product {
@@ -143,27 +159,16 @@ a.navbar-brand {
 }
 
 .prod-desc {
-  overflow-y: auto;
-  max-height: 85px;
-  background-color: #e0e0e0;
-  padding: 8px;
+    overflow-y: auto;
+    max-height: 85px;
+    background-color: #e0e0e0;
+    padding: 8px;
+
 }
 
-.fa-stack[data-count]:after {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  content: attr(data-count);
-  font-size: 40%;
-  padding: 0.6em;
-  border-radius: 999px;
-  line-height: 0.75em;
-  color: white;
-  text-align: center;
-  min-width: 2em;
-  font-weight: bold;
-  background: white;
-  border-style: solid;
+.ft-icon {
+    color: #66fcf1;
+    font-size: 25px;
 }
 
 .fa-circle {
