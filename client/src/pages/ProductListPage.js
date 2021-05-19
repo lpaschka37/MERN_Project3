@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 import React, { useState, useEffect } from "react";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 import Products from "../components/Products/Products";
@@ -18,7 +19,7 @@ function ProductListPage(props) {
     }
   };
 
-  //useEffect
+  // useEffect
   useEffect(() => {
     loadProductsByCategory();
   }, []);

@@ -15,14 +15,14 @@ function Home() {
     }
   };
 
-  //get all categories without duplicate
+  // get all categories without duplicate
   const getAllCategory = () => {
     const allCategories = products.map((product) => product.category);
-    const uniqueCategory = new Set(allCategories); //return food,vinyl,party supplies,games
+    const uniqueCategory = new Set(allCategories); // return food,vinyl,party supplies,games
     return Array.from(uniqueCategory);
   };
 
-  //useEffect
+  // useEffect
   useEffect(() => {
     console.log("using effect");
     loadProducts();

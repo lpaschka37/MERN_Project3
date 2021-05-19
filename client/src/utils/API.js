@@ -19,13 +19,13 @@ export default {
     return axios.post("/api/users", userData);
   },
   // Gets all Products
-  getProducts: async function () {
+  async getProducts() {
     console.log("api here");
     const dataGet = await axios.get("/api/products");
     console.log("API:", dataGet);
     return dataGet;
   },
-  getProductsByCategory: async function (category) {
+  async getProductsByCategory(category) {
     console.log("api here");
     const dataGet = await axios.get(`/api/products/category/${category}`);
     console.log("API:Category", dataGet);
