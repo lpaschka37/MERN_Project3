@@ -13,7 +13,7 @@ const productsSeed = [
     price: 22.99,
     seller: "Garyphanalia",
     rating: 4,
-    category: "G-things"
+    category: "Gare Wares"
   }, 
   {
     productImage: "outhouse.png",
@@ -22,7 +22,7 @@ const productsSeed = [
     price: 1999.99,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things"
+    category: "Gare Wares"
   }, 
   {
     productImage: "vinyl.png",
@@ -40,7 +40,7 @@ const productsSeed = [
     price: 14.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things"
+    category: "Gare Wares"
   }, 
   {
     productImage: "quesoing.png",
@@ -49,7 +49,7 @@ const productsSeed = [
     price: 2.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things",
+    category: "Gare Wares",
   },
   {
     productImage: "scoville.png",
@@ -58,7 +58,7 @@ const productsSeed = [
     price: 62.00,
     seller: "nathan",
     rating: 5,
-    category: "Games"
+    category: "Board Board Games"
   }, 
   {
     productImage: "dragonsthree.png",
@@ -67,7 +67,7 @@ const productsSeed = [
     price: 16.98,
     seller: "nathan",
     rating: 5,
-    category: "Games"
+    category: "Board Games"
   }, 
   {
     productImage: "alhambra.png",
@@ -76,7 +76,7 @@ const productsSeed = [
     price: 40.50,
     seller: "nathan",
     rating: 4,
-    category: "Games"
+    category: "Board Games"
   }, 
   {
     productImage: "tacocat.png",
@@ -85,7 +85,7 @@ const productsSeed = [
     price: 15.00,
     seller: "nathan",
     rating: 5,
-    category: "Games"
+    category: "Board Games"
   }, 
 
   {
