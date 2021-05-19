@@ -15,7 +15,7 @@ export default {
     return axios.delete(`/api/users/${id}`);
   },
   // Saves a user to the database
-  saveUsers(userData) {
+  async saveUsers(userData) {
     return axios.post("/api/users", userData);
   },
   // Gets all Products

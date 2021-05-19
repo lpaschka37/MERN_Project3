@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import API from "../utils/API";
 
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
@@ -11,15 +11,29 @@ function SigninPage() {
   function handleInputChange(event, formType) {
     const { name, value } = event.target;
     if (formType === "signin") {
-      setFormRegister({ ...formRegister, [name]: value });
-    } else if (formType === "register") {
       setFormSignin({ ...formSignin, [name]: value });
+    } else if (formType === "register") {
+      setFormRegister({ ...formRegister, [name]: value });
     }
   }
 
   function handleFormSubmit(event, formType) {
     event.preventDefault();
-    console.log(event);
+    if (formType === "signin") {
+      // API.login
+    } else if (formType === "register") {
+      API.saveUsers({
+        username: formRegister.username,
+        email: formRegister.email,
+        password: formRegister.password
+      })
+        .then((res) => {
+          if (res.data.err) {
+            alert(res.data.err);
+          }
+        })
+        .catch((err) => console.log("signin error,", err.data));
+    }
   }
 
   return (
@@ -53,7 +67,7 @@ function SigninPage() {
                         <input onChange={(e) => handleInputChange(e, "signin")} name="password" type="password" className="form-control" id="inputPWsignin"/>
                       </div>
                     </div>
-                    <button onClick={(e) => handleFormSubmit(e, "signin")} disabled={!(formRegister.username && formRegister.password)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
+                    <button onClick={(e) => handleFormSubmit(e, "signin")} disabled={!(formSignin.username && formSignin.password)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
                   </form>
 
                 </div>
@@ -92,7 +106,7 @@ function SigninPage() {
                             <input type="phone" className="form-control" id="inputPH">
                           </div>
                         </div>                                  --> */}
-                    <button onClick={(e) => handleFormSubmit(e, "register")} disabled={!(formSignin.username && formSignin.password && formSignin.email)} type="submit" className="home-btn form-btn">Create user</button>
+                    <button onClick={(e) => handleFormSubmit(e, "register")} disabled={!(formRegister.username && formRegister.password && formRegister.email)} type="submit" className="home-btn form-btn">Create user</button>
                   </form>
 
                 </div>
