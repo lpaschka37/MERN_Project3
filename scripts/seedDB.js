@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Still working on seed files
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/onlineproducts"
-);
+const config = { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false };
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onlineproducts", config);
 
 const productsSeed = [
   {
@@ -189,7 +188,7 @@ const productsSeed = [
     price: 5.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party supplies"
+    category: "Party Supplies"
   },
   {
     productImage: "hatmaskcake.png",
