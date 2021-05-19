@@ -11,9 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/onlineproducts"
-);
+const config = { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false };
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onlineproducts", config);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

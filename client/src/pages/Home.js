@@ -36,7 +36,7 @@ function Home() {
     let iconClass = "";
     if (category === "Vinyl") {
       iconClass = "fa-compact-disc";
-    } else if (category === "Party Supplies") {
+    } else if (category === "Party_Supplies") {
       iconClass = "fa-gifts";
     } else if (category === "Board Game") {
       iconClass = "fa-dice";
