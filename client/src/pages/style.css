@@ -22,21 +22,22 @@ a:hover {
   text-shadow: 0px 0px 8px #66fcf1;
 }
 
-.top-nav a, a.navbar-brand {
-    color: #66FCF1 !important;
+.top-nav a,
+a.navbar-brand {
+  color: #66fcf1 !important;
 }
 
 .top-nav a:hover {
-    color: #ffffff !important;
-    text-shadow: 0px 0px 8px #66FCF1;
+  color: #ffffff !important;
+  text-shadow: 0px 0px 8px #66fcf1;
 }
 
 .custom-drop {
-    background-color: #212529 !important;
+  background-color: #212529 !important;
 }
 
 .top-nav a:focus {
-    color: #66FCF1 !important;
+  color: #66fcf1 !important;
 }
 
 .navbar-brand i {
@@ -69,7 +70,7 @@ a:hover {
 
 .hero {
   /* background-image: linear-gradient(#002897, #ebccff); */
-  background-image: url("../images/dark_wrinkle2.jpg");
+  /* background-image: url("/images/dark_wrinkle2.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -107,44 +108,43 @@ a:hover {
 }
 
 .form-btn {
-    margin-top: 15px;
-    margin-right: 15px; 
-    background-color:#45a29e !important; 
-    color: #fff !important; 
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
+  margin-top: 15px;
+  margin-right: 15px;
+  background-color: #45a29e !important;
+  color: #fff !important;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
 }
 
 .form-btn:hover {
-    background-color: #66FCF1 !important;
-    color: black !important;
+  background-color: #66fcf1 !important;
+  color: black !important;
 }
 
 .cancel-btn {
-    margin-top: 15px;
-    margin-right: 15px; 
-    background-color:#f32121 !important; 
-    color: #fff !important; 
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
+  margin-top: 15px;
+  margin-right: 15px;
+  background-color: #f32121 !important;
+  color: #fff !important;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
 }
 
 .cancel-btn:hover {
-    background-color: #ff5555 !important;
-    color: black !important;
+  background-color: #ff5555 !important;
+  color: black !important;
 }
 
 .cart-btn {
-    background-color: #45a29e !important;
-    color: white;
-    width: 100%;
+  background-color: #45a29e !important;
+  color: white;
+  width: 100%;
 }
 
 .cart-btn:hover {
-    background-color: #66fcf1 !important;
-    
+  background-color: #66fcf1 !important;
 }
 
 .card-title-product {
@@ -159,16 +159,15 @@ a:hover {
 }
 
 .prod-desc {
-    overflow-y: auto;
-    max-height: 85px;
-    background-color: #e0e0e0;
-    padding: 8px;
-
+  overflow-y: auto;
+  max-height: 85px;
+  background-color: #e0e0e0;
+  padding: 8px;
 }
 
 .ft-icon {
-    color: #66fcf1;
-    font-size: 25px;
+  color: #66fcf1;
+  font-size: 25px;
 }
 
 .fa-circle {
