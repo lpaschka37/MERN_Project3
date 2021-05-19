@@ -80,7 +80,7 @@ function Home() {
           </div>
           <div className="carousel-item">
             <img
-              src="/images/dark_wrinkle2.jpg"
+              src="/images/wrinkle2.jpg"
               className="d-block w-100"
               alt="Slide 2"
             />

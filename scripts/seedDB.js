@@ -215,28 +215,28 @@ db.Products.remove({})
 
 const userSeed = [
   {
-    name: "Luke Paschka",
+    username: "Luke Paschka",
     email: "lpaschka@emaildomain.com",
     password: "123456abc",
     phone: "763-555-5555",
     address: "1234 declarathumbwar dr, Minneapolis MN 55555",
   },
   {
-    name: "Kelsie Lewis",
+    username: "Kelsie Lewis",
     email: "klewis@emaildomain.com",
     password: "123456abc",
     phone: "763-555-5555",
     address: "1234 declarathumbwar dr, Minneapolis MN 55555",
   },
   {
-    name: "Nathan Henteges",
+    username: "Nathan Henteges",
     email: "nhenteges@emaildomain.com",
     password: "123456abc",
     phone: "763-555-5555",
     address: "1234 declarathumbwar dr, Minneapolis MN 55555",
   },
   {
-    name: "Saranya Dayalan",
+    username: "Saranya Dayalan",
     email: "sdayalan@emaildomain.com",
     password: "123456abc",
     phone: "763-555-5555",
