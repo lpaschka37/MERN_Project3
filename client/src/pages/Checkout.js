@@ -165,7 +165,42 @@ function CheckOut(props) {
                           <option>Illinois</option>
                           <option>Indiana</option>
                           <option>Iowa</option>
-                        </select>
+                          <option>Kansas</option>
+                          <option>Kentucky</option>
+                          <option>Louisiana</option>
+                          <option>Maine</option>
+                          <option>Maryland</option>
+                          <option>Massachusetts</option>
+                          <option>Michigan</option>
+                          <option>Minnesota</option>
+                          <option>Mississippi</option>
+                          <option>Missouri</option>
+                          <option>Montana</option>
+                          <option>Nebraska</option>
+                          <option>Nevada</option>
+                          <option>New Hampshire</option>
+                          <option>NNew Jersey</option>
+                          <option>New Mexico</option>
+                          <option>New York</option>
+                          <option>North Carolina</option>
+                          <option>North Dakota</option>
+                          <option>Ohio</option>
+                          <option>Oklahoma</option>
+                          <option>Oregon</option>
+                          <option>Pennsylvania</option>
+                          <option>Rhode Island</option>
+                          <option>South Carolina</option>
+                          <option>South Dakota</option>
+                          <option>Tennessee</option>
+                          <option>Texas</option>
+                          <option>Utah</option>
+                          <option>Vermont</option>
+                          <option>Virginia</option>
+                          <option>Washington</option>
+                          <option>West Virginia</option>
+                          <option>Wisconsin</option>
+                          <option>Wyoming</option>
+                          </select>
                         <div className="invalid-feedback">
                           Please provide a valid state.
                         </div>
@@ -384,31 +419,5 @@ function CheckOut(props) {
     </>
   );
 }
-// const ItemInCarts = [
-//   {
-//   "productImage":"",
-//   "productName":"Ballons",
-//   "description":"Party ballons to pop",
-//   "price":"2",
-//   "seller":"Dollar Tree",
-//   "rating":"3"
-//   },
-//   {
-//   "productImage":"",
-//   "productName":"string curls",
-//   "description":"string curls to design",
-//   "price":"5",
-//   "seller":"Party city",
-//   "rating":"4"
-//   },
-//   {
-//   "productImage":"",
-//   "productName":"pinata",
-//   "description":"Pinata to broke ",
-//   "price":"10",
-//   "seller":"Hobby Lobby",
-//   "rating":"4"
-//   },
-// ]
 
 export default CheckOut;
