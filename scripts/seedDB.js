@@ -188,7 +188,7 @@ const productsSeed = [
     price: 5.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party supplies"
+    category: "Party Supplies"
   },
   {
     productImage: "hatmaskcake.png",
