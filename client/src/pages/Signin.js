@@ -8,16 +8,18 @@ function SigninPage() {
   const [formRegister, setFormRegister] = useState({});
   const [formSignin, setFormSignin] = useState({});
 
-  function handleInputChange(event) {
+  function handleInputChange(event, formType) {
     const { name, value } = event.target;
-    console.log(event.target);
-    setFormRegister({ ...formRegister, [name]: value });
-    console.log(formRegister);
+    if (formType === "signin") {
+      setFormRegister({ ...formRegister, [name]: value });
+    } else if (formType === "register") {
+      setFormSignin({ ...formSignin, [name]: value });
+    }
   }
 
-  function handleFormSubmit(event) {
+  function handleFormSubmit(event, formType) {
     event.preventDefault();
-    console.log("form submit");
+    console.log(event);
   }
 
   return (
@@ -42,16 +44,16 @@ function SigninPage() {
                     <div className="row">
                       <label for="inputUN" className="col-sm-4 col-form-label">User Name</label>
                       <div className="col-sm-12">
-                        <input type="username" name="username" className="form-control" id="inputUNsignin" onChange={handleInputChange}/>
+                        <input onChange={(e) => handleInputChange(e, "signin")} name="username" type="username" className="form-control" id="inputUNsignin"/>
                       </div>
                     </div>
                     <div className="row">
-                      <label for="inputPW" name="password" className="col-sm-4 col-form-label">Password</label>
+                      <label for="inputPW" className="col-sm-4 col-form-label">Password</label>
                       <div className="col-sm-12">
-                        <input onChange={handleInputChange} type="password" className="form-control" id="inputPWsignin"/>
+                        <input onChange={(e) => handleInputChange(e, "signin")} name="password" type="password" className="form-control" id="inputPWsignin"/>
                       </div>
                     </div>
-                    <button disabled={!(formRegister)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
+                    <button onClick={(e) => handleFormSubmit(e, "signin")} disabled={!(formRegister.username && formRegister.password)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
                   </form>
 
                 </div>
@@ -69,19 +71,19 @@ function SigninPage() {
                     <div className="row">
                       <label for="inputUN" className="col-sm-4 col-form-label">Username</label>
                       <div className="col-sm-12">
-                        <input type="username" className="form-control" id="inputUN"/>
+                        <input onChange={(e) => handleInputChange(e, "register")} name="username" type="username" className="form-control" id="inputUN"/>
                       </div>
                     </div>
                     <div className="row">
                       <label for="inputPW" className="col-sm-4 col-form-label">Password</label>
                       <div className="col-sm-12">
-                        <input type="password" className="form-control" id="inputPW"/>
+                        <input onChange={(e) => handleInputChange(e, "register")} name="password" type="password" className="form-control" id="inputPW"/>
                       </div>
                     </div>
                     <div className="row">
                       <label for="inputEmail" className="col-sm-4 col-form-label">Email</label>
                       <div className="col-sm-12">
-                        <input type="email" className="form-control" id="inputEmail"/>
+                        <input onChange={(e) => handleInputChange(e, "register")} name="email" type="email" className="form-control" id="inputEmail"/>
                       </div>
                     </div>
                     {/* <!-- <div className="row">
@@ -90,7 +92,7 @@ function SigninPage() {
                             <input type="phone" className="form-control" id="inputPH">
                           </div>
                         </div>                                  --> */}
-                    <button type="submit" className="home-btn form-btn">Create user</button>
+                    <button onClick={(e) => handleFormSubmit(e, "register")} disabled={!(formSignin.username && formSignin.password && formSignin.email)} type="submit" className="home-btn form-btn">Create user</button>
                   </form>
 
                 </div>
