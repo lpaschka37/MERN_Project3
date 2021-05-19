@@ -8,7 +8,7 @@ function Footer() {
     <footer className="text-muted py-5 bg-dark">
       <div className="container">
         <p className="float-end mb-1">
-          <a href="#top"> <FontAwesomeIcon style={{ fontSize: "40px;" }} icon={faArrowCircleUp} /> </a>
+          <a className="ft-icon" href="#top"> <FontAwesomeIcon style={{ fontsize: "40px;" }} icon={faArrowCircleUp} /> </a>
         </p>
         <p style={{ color: "white" }} className="mb-1">&copy;2021 University of Minnesota - Fullstack Bootcamp</p>
 

@@ -214,7 +214,9 @@ function CheckOut(props) {
                                     </div> --> */}
                 </div>
               </div>
-              <div style={{ color: "white" }} className="card shadow-sm">
+
+              {/* payment card */}
+              <div style={{ color: "white" }} className="card shadow-sm mt-3">
                 <div className="custom-card-dark p-4">
                   <h3 className="mb-3">Payment</h3>
                   <div className="d-block my-3">
@@ -243,7 +245,7 @@ function CheckOut(props) {
                         Free
                       </label>
                     </div>
-                    <div className="custom-control custom-radio">
+                    <div className="custom-control custom-radio mr-3">
                       <input
                         id="paypal"
                         name="paymentMethod"
@@ -314,13 +316,10 @@ function CheckOut(props) {
                     </div>
                   </div>
                   <hr className="mb-4" />
-                  <button className="btn form-btn btn-lg" type="submit">
+                  <button className="btn form-btn" type="submit">
                     Checkout
                   </button>
-                  <button
-                    style={{ backgroundColor: "red" }}
-                    className="btn form-btn btn-lg"
-                    type="submit"
+                  <button style={{ backgroundColor: "red" }} className="btn cancel-btn" type="submit"
                   >
                     Cancel
                   </button>
@@ -343,7 +342,7 @@ function CheckOut(props) {
                   <div className="col-md-12 order-md-2 mb-4"></div>
                   <h3 className="d-flex justify-content-between align-items-center mb-3">
                     Your cart summary
-                    <span className="badge badge-secondary badge-pill">3</span>
+                    <span style={{color: "#000"}} className="badge badge-secondary badge-pill">3</span>
                   </h3>
 
                   <ul className="list-group mb-3">
