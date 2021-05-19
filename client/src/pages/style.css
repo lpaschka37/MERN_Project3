@@ -21,24 +21,28 @@ a:hover {
 }
 
 .top-nav a, a.navbar-brand {
-    color: #66FCF1;
+    color: #66FCF1 !important;
 }
 
 .top-nav a:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     text-shadow: 0px 0px 8px #66FCF1;
 }
 
+.custom-drop {
+    background-color: #212529 !important;
+}
+
 .top-nav a:focus {
-    color: #66FCF1;
+    color: #66FCF1 !important;
 }
 
 .navbar-brand i {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .dropdown-menu {
-  background-color: #212529 ;
+  background-color: #212529 !important ;
 }
 
 .dropdown-menu a:focus, .dropdown-menu a:hover, .dropdown-menu a:active {
@@ -47,10 +51,6 @@ a:hover {
 
 .list-custom:hover {
   color: #212529;
-}
-
-.custom-drop {
-    background-color: #212529 !important;
 }
 
 .row {
@@ -103,27 +103,43 @@ a:hover {
 }
 
 .form-btn {
-    margin-top: 15px; 
-    background-color:#45a29e; 
-    color: #fff; 
+    margin-top: 15px;
+    margin-right: 15px; 
+    background-color:#45a29e !important; 
+    color: #fff !important; 
     border-radius: 8px;
     border: none;
     padding: 8px;
 }
 
 .form-btn:hover {
-    background-color: #66FCF1;
-    color: black;
+    background-color: #66FCF1 !important;
+    color: black !important;
+}
+
+.cancel-btn {
+    margin-top: 15px;
+    margin-right: 15px; 
+    background-color:#f32121 !important; 
+    color: #fff !important; 
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+.cancel-btn:hover {
+    background-color: #ff5555 !important;
+    color: black !important;
 }
 
 .cart-btn {
-    background-color: #45a29e;
+    background-color: #45a29e !important;
     color: white;
     width: 100%;
 }
 
 .cart-btn:hover {
-    background-color: #66fcf1;
+    background-color: #66fcf1 !important;
     
 }
 
@@ -146,26 +162,10 @@ a:hover {
 
 }
 
-.fa-stack[data-count]:after{
-    position:absolute;
-    right:0%;
-    top:0%;
-    content: attr(data-count);
-    font-size:40%;
-    padding:.6em;
-    border-radius:999px;
-    line-height:.75em;
-    color: white;
-    text-align:center;
-    min-width: 2em;
-    font-weight: bold;
-    background: white;
-    border-style:solid;
-  }
-  
-  .fa-circle {
-    color:#DF0000;
-  }
+.ft-icon {
+    color: #66fcf1;
+    font-size: 25px;
+}
 
 
 .carousel-item {
