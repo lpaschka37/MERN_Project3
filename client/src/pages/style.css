@@ -1,47 +1,56 @@
-h1, h2, h3 {
-    color: #66FCF1;
+h1,
+h2,
+h3 {
+  color: #66fcf1;
 }
 
 h6 {
-    margin: 10px;
+  margin: 10px;
 }
 
 a {
-    color: #66FCF1;
-    text-decoration: none;
+  color: #66fcf1;
+  text-decoration: none !important;
 }
 
 .primary-col {
-  color: #66FCF1 !important;
+  color: #66fcf1 !important;
 }
 
 a:hover {
-    color: #fff !important;
-    text-shadow: 0px 0px 8px #66FCF1;
+  color: #fff !important;
+  text-shadow: 0px 0px 8px #66fcf1;
 }
 
-.top-nav a, a.navbar-brand {
-    color: #66FCF1;
+.top-nav a,
+a.navbar-brand {
+  color: #66fcf1 !important;
 }
 
 .top-nav a:hover {
-    color: #ffffff;
-    text-shadow: 0px 0px 8px #66FCF1;
+  color: #ffffff !important;
+  text-shadow: 0px 0px 8px #66fcf1;
+}
+
+.custom-drop {
+  background-color: #212529 !important;
 }
 
 .top-nav a:focus {
-    color: #66FCF1;
+  color: #66fcf1 !important;
 }
 
 .navbar-brand i {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .dropdown-menu {
-  background-color: #212529 ;
+  background-color: #212529 !important ;
 }
 
-.dropdown-menu a:focus, .dropdown-menu a:hover, .dropdown-menu a:active {
+.dropdown-menu a:focus,
+.dropdown-menu a:hover,
+.dropdown-menu a:active {
   background-color: #212529 !important;
 }
 
@@ -49,159 +58,156 @@ a:hover {
   color: #212529;
 }
 
-.custom-drop {
-    background-color: #212529 !important;
-}
-
 .row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -2);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -8);
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -2);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -8);
 }
 
 .hero {
-    /* background-image: linear-gradient(#002897, #ebccff); */
-    background-image: url("../images/dark_wrinkle2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  /* background-image: linear-gradient(#002897, #ebccff); */
+  /* background-image: url("dark_wrinkle2.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .icon {
-    font-size: 150px;
-    text-align: center;
-    
- }
+  font-size: 150px;
+  text-align: center;
+  color: #66fcf1;
+}
 
- .icon:hover {
-    color: #fff;
-     text-decoration: none;
-     cursor: pointer;
-     text-shadow: 0px 0px 10px #66FCF1;
- }
+.icon:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #66fcf1;
+}
 
 .bg-dark-custom {
-    background-color: #c4c4c4;
+  background-color: #c4c4c4;
 }
 
 .custom-card-dark {
-    background-color: #1F2833;
+  background-color: #1f2833 !important;
 }
 
 .card-title {
-    text-align: center;
-    color: #66fcf1;
+  text-align: center;
+  color: #66fcf1;
 }
 
 .card-text-form {
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 }
 
 .form-btn {
-    margin-top: 15px; 
-    background-color:#45a29e; 
-    color: #fff; 
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
+  margin-top: 15px;
+  margin-right: 15px;
+  background-color: #45a29e !important;
+  color: #fff !important;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
 }
 
 .form-btn:hover {
-    background-color: #66FCF1;
-    color: black;
+  background-color: #66fcf1 !important;
+  color: black !important;
+}
+
+.cancel-btn {
+  margin-top: 15px;
+  margin-right: 15px;
+  background-color: #f32121 !important;
+  color: #fff !important;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+}
+
+.cancel-btn:hover {
+  background-color: #ff5555 !important;
+  color: black !important;
 }
 
 .cart-btn {
-    background-color: #45a29e;
-    color: white;
-    width: 100%;
+  background-color: #45a29e !important;
+  color: white;
+  width: 100%;
 }
 
 .cart-btn:hover {
-    background-color: #66fcf1;
-    
+  background-color: #66fcf1 !important;
 }
 
 .card-title-product {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .card-img-top {
-    width: 100%;
-    height: 40vh;
-    object-fit: scale-down;
+  width: 100%;
+  height: 40vh;
+  object-fit: scale-down;
 }
 
 .prod-desc {
-    overflow-y: auto;
-    max-height: 85px;
-    background-color: #e0e0e0;
-    padding: 8px;
-
+  overflow-y: auto;
+  max-height: 85px;
+  background-color: #e0e0e0;
+  padding: 8px;
 }
 
-.fa-stack[data-count]:after{
-    position:absolute;
-    right:0%;
-    top:0%;
-    content: attr(data-count);
-    font-size:40%;
-    padding:.6em;
-    border-radius:999px;
-    line-height:.75em;
-    color: white;
-    text-align:center;
-    min-width: 2em;
-    font-weight: bold;
-    background: white;
-    border-style:solid;
-  }
-  
-  .fa-circle {
-    color:#DF0000;
-  }
+.ft-icon {
+  color: #66fcf1;
+  font-size: 25px;
+}
 
+.fa-circle {
+  color: #df0000;
+}
 
 .carousel-item {
-    position: relative;
-    display: none;
-    float: left;
-    width: 100%;
-    height: 400px;
-    margin-right: -100%;
-    backface-visibility: hidden;
-    transition: transform .6s ease-in-out;
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  height: 400px;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+  background-position: center;
+  background-size: cover;
 }
 
 .carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 1.25rem;
-    left: 15%;
-    padding-top: 1.25rem;
-    padding-bottom: 8.0rem;
-    color: #fff;
-    text-align: center;
+  position: absolute;
+  right: 15%;
+  bottom: 1.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 8rem;
+  color: #fff;
+  text-align: center;
 }
 
 .badge {
-    display: inline-block;
-    padding: .35em .65em;
-    font-size: .75em;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    background-color: #66fcf1;
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: #66fcf1;
 }

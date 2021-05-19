@@ -19,10 +19,16 @@ export default {
     return axios.post("/api/users", userData);
   },
   // Gets all Products
-  getProducts: async function() {
-    console.log("api here")
+  getProducts: async function () {
+    console.log("api here");
     const dataGet = await axios.get("/api/products");
     console.log("API:", dataGet);
+    return dataGet;
+  },
+  getProductsByCategory: async function (category) {
+    console.log("api here");
+    const dataGet = await axios.get(`/api/products/category/${category}`);
+    console.log("API:Category", dataGet);
     return dataGet;
   },
   // Gets specific product with the given id

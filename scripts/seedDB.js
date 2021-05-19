@@ -3,8 +3,7 @@ const db = require("../models");
 
 // Still working on seed files
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/onlineproducts"
+  process.env.MONGODB_URI || "mongodb://localhost/onlineproducts"
 );
 
 const productsSeed = [
@@ -42,17 +41,17 @@ const productsSeed = [
     price: 14.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "Food"
+    category: "G-things"
   }, 
   {
     productImage: "quesoing.png",
     productName: "Queso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",    
+    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
     price: 2.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "Food"
-  }, 
+    category: "G-things",
+  },
   {
     productImage: "scoville.png",
     productName: "Scoville",
@@ -60,7 +59,7 @@ const productsSeed = [
     price: 62.00,
     seller: "nathan",
     rating: 5,
-    category: "Food"
+    category: "Games"
   }, 
   {
     productImage: "dragonsthree.png",
@@ -97,7 +96,7 @@ const productsSeed = [
     price: 2.00,
     seller: "saranya",
     rating: 5,
-    category: "Party Supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "goodbye.png",
@@ -106,7 +105,7 @@ const productsSeed = [
     price: 28.00,
     seller: "Luke",
     rating: 5,
-    category: "Vinyl"
+    category: "Vinyl",
   },
   {
     productImage: "darkside.png",
@@ -115,7 +114,7 @@ const productsSeed = [
     price: 38.00,
     seller: "Luke",
     rating: 5,
-    category: "Vinyl"
+    category: "Vinyl",
   },
   {
     productImage: "princeblack.png",
@@ -133,7 +132,7 @@ const productsSeed = [
     price: 31.00,
     seller: "Luke",
     rating: 5,
-    category: "Vinyl"
+    category: "Vinyl",
   },
   {
     productImage: "pinata.png",
@@ -142,7 +141,7 @@ const productsSeed = [
     price: 10.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party Supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "curls.png",
@@ -151,34 +150,37 @@ const productsSeed = [
     price: 5.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party Supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "twentyone.png",
-    productName:  "Graduation hats 2021",
-    description: "A graduation hats for 2021.Add a special touch to the graduation celebration",
+    productName: "Graduation hats 2021",
+    description:
+      "A graduation hats for 2021.Add a special touch to the graduation celebration",
     price: 10.00,
     seller: "Saranya",
     rating: 3,
-    category: "Party Supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "balloonz.png",
     productName: "Balloons ",
-    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",
+    description:
+      "Personalize your next big event with the Spritz Number 0 floating helium balloon",
     price: 5.00,
     seller: "Saranya",
     rating: 3,
-    category: "Party Supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "sixtieth.png",
     productName: "Number Balloons",
-    description: "Personalize your next big event with the Spritz Number 0 floating helium balloon",    
+    description:
+      "Personalize your next big event with the Spritz Number 0 floating helium balloon",
     price: 5.00,
     seller: "Saranya",
     rating: 3,
-    category: "Party supplies"
+    category: "Party Supplies",
   },
   {
     productImage: "sixtypop.png",
@@ -192,26 +194,24 @@ const productsSeed = [
   {
     productImage: "hatmaskcake.png",
     productName: " Rotating cake with party hats",
-    description: " Magic spin birthday cake with hats and masks",    
+    description: " Magic spin birthday cake with hats and masks",
     price: 15.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party supplies"
-  }
+    category: "Party Supplies",
+  },
 ];
 
-db.Products
-  .remove({})
+db.Products.remove({})
   .then(() => db.Products.collection.insertMany(productsSeed))
-  .then(data => {
+  .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });
-
 
 const userSeed = [
   {
@@ -241,22 +241,19 @@ const userSeed = [
     password: "123456abc",
     phone: "763-555-5555",
     address: "1234 declarathumbwar dr, Minneapolis MN 55555",
-  }
-
+  },
 ];
 
-db.User
-  .remove({})
+db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
+  .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });
-
 
 // Users:
 // username
@@ -264,5 +261,3 @@ db.User
 // email
 // phone
 // address
-
-
