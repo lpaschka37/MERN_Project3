@@ -38,10 +38,12 @@ function Home() {
       iconClass = "fa-compact-disc";
     } else if (category === "Party Supplies") {
       iconClass = "fa-gifts";
-    } else if (category === "Board Game") {
+    } else if (category === "Games") {
       iconClass = "fa-dice";
+    } else if (category === "G-things") {
+      iconClass = "fa-grin-wink";
     } else {
-      iconClass = "fa-random";
+      iconClass = "fa-recycle";
     }
     return iconClass;
   };

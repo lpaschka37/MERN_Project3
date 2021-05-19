@@ -29,7 +29,8 @@ function NavTop() {
             id="collapsible-nav-dropdown"
           >
             <NavDropdown.Item href="/vinyl">Vinyl</NavDropdown.Item>
-            <NavDropdown.Item href="/green">Green Stuff</NavDropdown.Item>
+            <NavDropdown.Item href="/vinyl">G-Things</NavDropdown.Item>
+            <NavDropdown.Item href="/green">Recycle</NavDropdown.Item>
             <NavDropdown.Item href="/games">Board Games</NavDropdown.Item>
             <NavDropdown.Item href="/party">Party Supplies</NavDropdown.Item>
           </NavDropdown>
