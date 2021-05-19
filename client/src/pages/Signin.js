@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
+
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
 function SigninPage() {
+  // State
+  const [formRegister, setFormRegister] = useState({});
+  const [formSignin, setFormSignin] = useState({});
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    console.log(event.target);
+    setFormRegister({ ...formRegister, [name]: value });
+    console.log(formRegister);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log("form submit");
+  }
+
   return (
     <empty>
       <CategoryJumbotron
-          title={"Checkout Page"}
+          title={"Login Page"}
           subtitle={
-            "You will either need to login in or create a user in order to complete your checkout."
+            "Register or sign in."
           }
         />
       <div className="album py-5 bg-dark-custom">
@@ -18,21 +36,24 @@ function SigninPage() {
                 <div className="card-body custom-card-dark">
                   <h4 className="card-title">Sign In</h4>
                   <p className="card-text-form">Sign in with your username and password to complete your transaction.</p>
+
+                  {/* Sign In */}
                   <form style= {{ color: "#fff" }}>
                     <div className="row">
                       <label for="inputUN" className="col-sm-4 col-form-label">User Name</label>
                       <div className="col-sm-12">
-                        <input type="username" className="form-control" id="inputUN"/>
+                        <input type="username" name="username" className="form-control" id="inputUNsignin" onChange={handleInputChange}/>
                       </div>
                     </div>
                     <div className="row">
-                      <label for="inputPW" className="col-sm-4 col-form-label">Password</label>
+                      <label for="inputPW" name="password" className="col-sm-4 col-form-label">Password</label>
                       <div className="col-sm-12">
-                        <input type="password" className="form-control" id="inputPW"/>
+                        <input onChange={handleInputChange} type="password" className="form-control" id="inputPWsignin"/>
                       </div>
                     </div>
-                    <button type="submit" className="home-btn form-btn">Sign in</button>
+                    <button disabled={!(formRegister)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
                   </form>
+
                 </div>
               </div>
             </div>
@@ -42,6 +63,8 @@ function SigninPage() {
                 <div className="card-body custom-card-dark">
                   <h4 className="card-title">Create a User</h4>
                   <p className="card-text-form">First time? You will need to create a user in order to complete your transaction.</p>
+
+                  {/* Register */}
                   <form style= {{ color: "#fff" }}>
                     <div className="row">
                       <label for="inputUN" className="col-sm-4 col-form-label">Username</label>
@@ -69,6 +92,7 @@ function SigninPage() {
                         </div>                                  --> */}
                     <button type="submit" className="home-btn form-btn">Create user</button>
                   </form>
+
                 </div>
               </div>
             </div>
