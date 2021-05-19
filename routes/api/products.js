@@ -15,6 +15,6 @@ router
   .delete(productsController.remove);
 
 // Matches with "/api/products/:category"
-router.route("/:category").get(productsController.findByCategory);
+router.route("/category/:category").get(productsController.findByCategory);
 
 module.exports = router;

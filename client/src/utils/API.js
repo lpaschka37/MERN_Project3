@@ -28,7 +28,7 @@ export default {
   },
   getProductsByCategory: async function (category) {
     console.log("api here");
-    const dataGet = await axios.get(`/api/products/${category}`);
+    const dataGet = await axios.get(`/api/products/category/${category}`);
     console.log("API:Category", dataGet);
     return dataGet;
   },

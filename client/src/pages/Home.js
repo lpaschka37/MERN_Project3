@@ -1,9 +1,51 @@
-import React from "react";
-
-import header1 from "../images/header.png";
-import header2 from "../images/dark_wrinkle2.jpg";
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
 
 function Home() {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState();
+
+  // Loads all products into state
+  const loadProducts = async () => {
+    try {
+      const prods = await API.getProducts();
+      setProducts(prods.data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  //get all categories without duplicate
+  const getAllCategory = () => {
+    const allCategories = products.map((product) => product.category);
+    const uniqueCategory = new Set(allCategories); //return food,vinyl,party supplies,games
+    return Array.from(uniqueCategory);
+  };
+
+  //useEffect
+  useEffect(() => {
+    console.log("using effect");
+    loadProducts();
+  }, []);
+
+  useEffect(() => {
+    setCategories(getAllCategory());
+  }, [products]);
+
+  const getIconClassForCategory = (category) => {
+    let iconClass = "";
+    if (category === "Vinyl") {
+      iconClass = "fa-compact-disc";
+    } else if (category === "Party Supplies") {
+      iconClass = "fa-gifts";
+    } else if (category === "Board Game") {
+      iconClass = "fa-dice";
+    } else {
+      iconClass = "fa-random";
+    }
+    return iconClass;
+  };
+
   return (
     <>
       <div
@@ -29,11 +71,19 @@ function Home() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={header1} className="d-block w-100" alt="Slide one" />
+            <img
+              src="/images/header.png"
+              className="d-block w-100"
+              alt="Slide one"
+            />
             <div className="carousel-caption d-md-block mb-8"></div>
           </div>
           <div className="carousel-item">
-            <img src={header2} className="d-block w-100" alt="Slide 2" />
+            <img
+              src="/images/dark_wrinkle2.jpg"
+              className="d-block w-100"
+              alt="Slide 2"
+            />
             <div className="carousel-caption d-md-block">
               <h1>Welcome to Garyphenalia</h1>
               <p>
@@ -70,22 +120,28 @@ function Home() {
       </div>
 
       {/* // category section */}
-      <div class="py-5 bg-dark-custom">
-        <div class="container-fluid">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 col-lg-12">
-            <div class="col-lg-3 mb-3">
-              <a href="/Vinyle/productlistpage">
-                <div class="card custom-card-dark">
-                  <div class="icon">
-                    <i class="fas fa-compact-disc"></i>
-                  </div>
-                  <h4 class="card-title p-2">Vinyl</h4>
+      {categories && (
+        <div className="py-5 bg-dark-custom">
+          <div className="container-fluid">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 col-lg-12">
+              {categories.map((category) => (
+                <div className="col-lg-3 mb-3">
+                  <a href={`/${category}/productlistpage`}>
+                    <div className="card custom-card-dark">
+                      <div className="icon">
+                        <i
+                          className={`fas ${getIconClassForCategory(category)}`}
+                        ></i>
+                      </div>
+                      <h4 className="card-title p-2">{category}</h4>
+                    </div>
+                  </a>
                 </div>
-              </a>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

@@ -14,8 +14,8 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findByCategory(req, res) {
-    console.log("category...", req);
-    db.Products.findByCategory(req.params.category)
+    console.log("category...", req.params.category);
+    db.Products.find({ category: req.params.category })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
