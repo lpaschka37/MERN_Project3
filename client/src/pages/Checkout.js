@@ -2,19 +2,22 @@
 /* eslint-disable no-unused-vars */
 // TODO: needs finishing
 
-import React from "react";
+import { React, useState, useEffect } from "react";
 import _ from "lodash";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
-import Products from "../components/Products/Products";
-
-const ItemInCarts = [];
-
 function CheckOut(props) {
-  const total = _.sumBy(
-    ItemInCarts,
-    (ItemInCart) => ItemInCart.price * ItemInCart.addToCart.quantity
-  );
+  const [cartItems, setCartItems] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
+
+  useEffect(() => {
+    setCartItems(props.cart);
+  }, [props]);
+
+  // const total = _.sumBy(
+  //   cartItems,
+  //   (ItemInCart) => ItemInCart.price * ItemInCart.addToCart.quantity
+  // );
 
   return (
     <>
@@ -377,12 +380,12 @@ function CheckOut(props) {
                   <div className="col-md-12 order-md-2 mb-4"></div>
                   <h3 className="d-flex justify-content-between align-items-center mb-3">
                     Your cart summary
-                    <span style={{ color: "#000" }} className="badge badge-secondary badge-pill">3</span>
+                    <span style={{ color: "#000" }} className="badge badge-secondary badge-pill">{cartItems ? cartItems.length : 0}</span>
                   </h3>
 
                   <ul className="list-group mb-3">
                     <li className="list-group-item d-flex justify-content-between lh-condensed"></li>
-                    {ItemInCarts.map((ItemInCart) => (
+                    {cartItems && cartItems.map((ItemInCart) => (
                       <li className="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                           <h6 className="my-0">{ItemInCart.productName}</h6>
@@ -396,7 +399,7 @@ function CheckOut(props) {
                           </small>
                         </div>
                         <span className="text-muted">
-                          ${ItemInCart.price * ItemInCart.addToCart.quantity}
+                          ${ItemInCart.price * ItemInCart.quantity}
                         </span>
                         {/* <div className="row">
                                             <div className="col-2"> <img src={ItemInCart.productImage} alt="..."  height="50px" width="50px" /> </div>
@@ -407,7 +410,7 @@ function CheckOut(props) {
                     ))}
                     <li className="list-group-item d-flex justify-content-between">
                       <span>Total (USD)</span>
-                      <strong>${total}</strong>
+                      <strong>${cartTotal}</strong>
                     </li>
                   </ul>
                 </div>
