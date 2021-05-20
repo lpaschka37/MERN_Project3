@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./pages/style.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import NavTop from "./components/NavTop/NavTop";

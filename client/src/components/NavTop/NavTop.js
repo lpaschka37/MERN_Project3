@@ -28,15 +28,15 @@ function NavTop(props) {
             className="custom-drop"
             id="collapsible-nav-dropdown"
           >
-            <NavDropdown.Item href="/vinyl">Vinyl</NavDropdown.Item>
-            <NavDropdown.Item href="/green">Green Stuff</NavDropdown.Item>
-            <NavDropdown.Item href="/games">Board Games</NavDropdown.Item>
-            <NavDropdown.Item href="/party">Party Supplies</NavDropdown.Item>
+            <NavDropdown.Item href="/#/vinyl">Vinyl</NavDropdown.Item>
+            <NavDropdown.Item href="/#/green">Green Stuff</NavDropdown.Item>
+            <NavDropdown.Item href="/#/games">Board Games</NavDropdown.Item>
+            <NavDropdown.Item href="/#/party">Party Supplies</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/checkout" className="primary-col">
+          <Nav.Link href="/#/checkout" className="primary-col">
             <i className="fas fa-shopping-cart"></i> Cart
           </Nav.Link>
-          <Nav.Link href="/signin" className="primary-col">
+          <Nav.Link href="/#/signin" className="primary-col">
             <i className="fas fa-user"></i>{(props.user) ? " Logout" : " Login"}
           </Nav.Link>
         </Nav>
