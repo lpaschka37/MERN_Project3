@@ -22,9 +22,7 @@ function ProductListPage(props) {
   // useEffect
   useEffect(() => {
     loadProductsByCategory();
-  }, []);
-
-  console.log(productLists);
+  }, [props]);
 
   return (
     <>

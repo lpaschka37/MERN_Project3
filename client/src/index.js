@@ -5,8 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-
-//Cart function, not done----KL
+// Cart function, not done----KL
 
 // import './index.css';
 
