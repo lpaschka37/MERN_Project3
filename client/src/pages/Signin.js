@@ -3,10 +3,14 @@ import API from "../utils/API";
 
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
-function SigninPage() {
+function SigninPage(props) {
   // State
   const [formRegister, setFormRegister] = useState({});
   const [formSignin, setFormSignin] = useState({});
+
+  // Get state passed down via props
+  const signedInUser = props.user;
+  const setSignedInUser = props.setuser;
 
   function handleInputChange(event, formType) {
     const { name, value } = event.target;
@@ -19,8 +23,17 @@ function SigninPage() {
 
   function handleFormSubmit(event, formType) {
     event.preventDefault();
+    console.log("submit, ", formType);
     if (formType === "signin") {
-      // API.login
+      API.loginUser({
+        username: formSignin.username,
+        password: formSignin.password
+      })
+        .then((res) => {
+          console.log(res.data.username);
+          setSignedInUser(res.data.username);
+        })
+        .catch((err) => console.log(err));
     } else if (formType === "register") {
       API.saveUsers({
         username: formRegister.username,
@@ -31,6 +44,8 @@ function SigninPage() {
           if (res.data.err) {
             alert(res.data.err);
           }
+          console.log(res.data.username);
+          setSignedInUser(res.data.username);
         })
         .catch((err) => console.log("signin error,", err.data));
     }
@@ -44,6 +59,7 @@ function SigninPage() {
             "Register or sign in."
           }
         />
+      <p>{signedInUser} is logged in</p>
       <div className="album py-5 bg-dark-custom">
         <div className="container-fluid">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
@@ -67,7 +83,7 @@ function SigninPage() {
                         <input onChange={(e) => handleInputChange(e, "signin")} name="password" type="password" className="form-control" id="inputPWsignin"/>
                       </div>
                     </div>
-                    <button onClick={(e) => handleFormSubmit(e, "signin")} disabled={!(formSignin.username && formSignin.password)} onClick={handleFormSubmit} type="submit" className="home-btn form-btn">Sign in</button>
+                    <button onClick={(e) => handleFormSubmit(e, "signin")} disabled={!(formSignin.username && formSignin.password)} type="submit" className="home-btn form-btn">Sign in</button>
                   </form>
 
                 </div>

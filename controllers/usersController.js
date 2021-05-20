@@ -18,24 +18,37 @@ module.exports = {
         if (user) {
           return res.json({ err: "Username already exists" });
         }
-        bcrypt.genSalt(10, (saltErr, salt) => {
-          bcrypt.hash(req.body.username, salt, (hashErr, hash) => {
-            if (hashErr) throw hashErr;
-            const newUser = new db.User({
-              username: req.body.username,
-              email: req.body.email,
-              password: hash
-            });
-            newUser.save()
-              .then((user) => res.json(user))
-              .catch((err) => console.log(err));
+        bcrypt.hash(req.body.password, 10, (hashErr, hash) => {
+          if (hashErr) throw hashErr;
+          const newUser = new db.User({
+            username: req.body.username,
+            email: req.body.email,
+            password: hash
           });
+          newUser.save()
+            .then((savedUser) => res.json(savedUser))
+            .catch((err) => console.log(err));
         });
       });
   },
 
   login(req, res) {
-    // 
+    db.User
+      .findOne({ username: req.body.username })
+      .then((user) => {
+        if (!user) {
+          return res.json({ err: "No user with that username found" });
+        }
+        // Compare password hashes
+        bcrypt.compare(req.body.password, user.password)
+          .then((isMatch) => {
+            if (isMatch) {
+              res.json(user);
+            } else {
+              return res.json({ err: "Incorrect Password" });
+            }
+          });
+      });
   },
 
   findById(req, res) {

@@ -20,7 +20,7 @@ export default {
   },
   loginUser(userData) {
     return axios.post("/api/users/login", userData);
-  }
+  },
 
   // Gets all Products
   async getProducts() {
