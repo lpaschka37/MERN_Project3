@@ -11,6 +11,7 @@ function CheckOut(props) {
   const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
+    console.log(props.cart);
     setCartItems(props.cart);
   }, [props]);
 
@@ -44,7 +45,6 @@ function CheckOut(props) {
                           className="form-control"
                           id="firstName"
                           placeholder=""
-                          value=""
                           required
                         />
                         <div className="invalid-feedback">
@@ -58,7 +58,6 @@ function CheckOut(props) {
                           className="form-control"
                           id="lastName"
                           placeholder=""
-                          value=""
                           required
                         />
                         <div className="invalid-feedback">
@@ -82,7 +81,7 @@ function CheckOut(props) {
                         />
                         <div
                           className="invalid-feedback"
-                          style={{ width: "100%;" }}
+                          style={{ width: "100%" }}
                         >
                           Your username is required.
                         </div>
@@ -264,7 +263,7 @@ function CheckOut(props) {
                         name="paymentMethod"
                         type="radio"
                         className="custom-control-input"
-                        checked
+                        defaultChecked
                         required
                       />
                       <label className="custom-control-label" htmlFor="credit">
