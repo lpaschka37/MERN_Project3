@@ -4,6 +4,10 @@ h3 {
   color: #66fcf1;
 }
 
+h5 {
+  min-height: 60px;
+}
+
 h6 {
   margin: 10px;
 }
@@ -107,6 +111,10 @@ a.navbar-brand {
   color: #fff;
 }
 
+.card-price {
+  margin-top: 10%;
+}
+
 .form-btn {
   margin-top: 15px;
   margin-right: 15px;
@@ -147,6 +155,21 @@ a.navbar-brand {
   background-color: #66fcf1 !important;
 }
 
+.rate-btn {
+  margin: 15px 0px 0px 5px;
+  background-color: #45a29e !important;
+  color: #fff !important;
+  width: 100px;
+  border-radius: 8px;
+  border: none;
+  padding: 4px;
+}
+
+.rate-btn:hover {
+  background-color: #66fcf1 !important;
+  color: black !important;
+}
+
 .card-title-product {
   text-align: center;
   font-weight: bold;
@@ -158,9 +181,15 @@ a.navbar-brand {
   object-fit: scale-down;
 }
 
+.prod-card {
+  margin: 0px;
+  min-height: 450px;
+  
+} 
+
 .prod-desc {
   overflow-y: auto;
-  max-height: 85px;
+  min-height: 120px;
   background-color: #e0e0e0;
   padding: 8px;
 }

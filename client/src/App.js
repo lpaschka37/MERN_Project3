@@ -13,21 +13,40 @@ import SignIn from "./pages/Signin";
 function App() {
   // Setting global user logged in state
   const [signedIn, setSignedIn] = useState("");
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
+    console.log("logged in user lookup");
     const loggedInUser = localStorage.getItem("user");
+    const savedCart = localStorage.getItem("cart");
     if (loggedInUser) {
       setSignedIn(loggedInUser);
+    }
+    if (savedCart) {
+      console.log("saved cart", JSON.parse(savedCart));
+      setCart(JSON.parse(savedCart));
     }
   }, []);
 
   return (
     // Put Products into state
     <Router>
-      <NavTop user={signedIn} setuser={setSignedIn} />
+      <NavTop user={signedIn} setuser={setSignedIn} cart={cart} />
       <Route exact path="/" component={Home} />
-      <Route exact path="/:category/productlist" component={ProductListPage} />
-      <Route exact path="/checkout" component={CheckOut} />
+      <Route
+        exact
+        path="/:category/productlist"
+        component={(props) => (
+          <ProductListPage {...props} cart={cart} setCart={setCart} />
+        )}
+      />
+      <Route
+        exact
+        path="/checkout"
+        component={(props) => (
+          <CheckOut {...props} cart={cart} setCart={setCart} />
+        )}
+      />
       <Route
         exact
         path="/signin"

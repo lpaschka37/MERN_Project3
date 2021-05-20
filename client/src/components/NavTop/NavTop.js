@@ -14,7 +14,7 @@ function NavTop(props) {
       expand="lg"
       className="navbar navbar-dark bg-dark container-fluid"
     >
-      <Navbar.Brand href="/" className="navbar-brand primary-col">
+      <Navbar.Brand href="/#/" className="navbar-brand primary-col">
         <i className="fas fa-store-alt"></i>Garyphenalia
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -46,7 +46,7 @@ function NavTop(props) {
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/#/checkout" className="primary-col">
-            <i className="fas fa-shopping-cart"></i> Cart
+            <i className="fas fa-shopping-cart"></i> {props.cart.length} Cart
           </Nav.Link>
           <Nav.Link className="primary-col">
             <i className="fas fa-user"></i>
