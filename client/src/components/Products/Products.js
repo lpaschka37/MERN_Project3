@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-underscore-dangle */
+import React, { useState, useEffect } from "react";
 // import Rating from "./Rating";
 import StarRatingComponent from "react-star-rating-component";
 import _ from "lodash";
@@ -10,11 +11,13 @@ function Products(props) {
   const [product, setProduct] = useState(props.product);
   const [showRated, setShowRated] = useState(false);
 
-  const calculateRating = () => {
-    return Math.floor(
-      _.sumBy(product.ratings, (rating) => rating.rate) / product.ratings.length
-    );
-  };
+  useEffect(() => {
+    setProduct(props.product);
+  }, [props]);
+
+  const calculateRating = () => Math.floor(
+    _.sumBy(product.ratings, (rating) => rating.rate) / product.ratings.length
+  );
 
   const enterRating = (selectedRating) => {
     setRatingValue(selectedRating);
@@ -74,7 +77,7 @@ function Products(props) {
                   <StarRatingComponent
                     name="rate2"
                     starCount={5}
-                    value={ratingValue} 
+                    value={ratingValue}
                     onStarClick={enterRating.bind(enterRating)}
                   />
                 </div>
@@ -90,8 +93,7 @@ function Products(props) {
 
 export default Products;
 
-
-//Cart fx not complete yet-------------KL
+// Cart fx not complete yet-------------KL
 // export default function Product(props) {
 //   const { product, onAdd } = props;
 //   return (

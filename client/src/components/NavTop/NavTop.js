@@ -47,7 +47,7 @@ function NavTop(props) {
 
 export default NavTop;
 
-//Cart fx example, will remove//KL
+// Cart fx example, will remove//KL
 // export default function Header(props) {
 //   return (
 //     <header className="block row center">

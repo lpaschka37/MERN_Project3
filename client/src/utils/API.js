@@ -29,21 +29,21 @@ export default {
     return dataGet;
   },
 
-  getProductsByCategory: async function (category) {
+  async getProductsByCategory(category) {
     console.log("getting Cateogry");
     const dataGet = await axios.get(`/api/products/category/${category}`);
     console.log("API:Category", dataGet);
     return dataGet;
   },
 
-  getProductsById: async function (id) {
+  async getProductsById(id) {
     console.log("getting Product by Id");
     const dataGet = await axios.get(`/api/products/${id}`);
     console.log("API:Id", dataGet);
     return dataGet;
   },
 
-  updateRating: async function (productId, givenRate) {
+  async updateRating(productId, givenRate) {
     const dataGet = await axios.post(`/api/products/ratings/${productId}`, {
       rate: givenRate,
     });
