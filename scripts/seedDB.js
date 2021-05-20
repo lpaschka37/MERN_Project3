@@ -40,7 +40,7 @@ const productsSeed = [
         rate: 3,
       },
     ],
-    category: "G-things",
+    category: "Gare Wares",
   },
   {
     productImage: "outhouse.png",
@@ -50,7 +50,65 @@ const productsSeed = [
     price: 1999.99,
     seller: "Garyphanalia",
     ratings: [],
-    category: "G-things",
+    category: "Gare Wares",
+  },
+  {
+    productImage: "cheese-queso-dip.png",
+    productName: "Queso Beso",
+    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
+    price: 14.49,
+    seller: "Garyphanalia",
+    ratings: [],
+    category: "Gare Wares",
+  },
+  {
+    productImage: "quesoing.png",
+    productName: "Queso",
+    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
+    price: 2.49,
+    seller: "Garyphanalia",
+    ratings: [],
+    category: "Gare Wares",
+  },
+  {
+    productImage: "scoville.png",
+    productName: "Scoville",
+    description:
+      "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
+    price: 62.0,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
+  },
+  {
+    productImage: "dragonsthree.png",
+    productName: "Dragon's Gold",
+    description:
+      "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
+    price: 16.98,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
+  },
+  {
+    productImage: "alhambra.png",
+    productName: "Alhambra",
+    description:
+      "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
+    price: 40.5,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
+  },
+  {
+    productImage: "tacocat.png",
+    productName: "TacoCat",
+    description:
+      "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
+    price: 15.0,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
   },
   {
     productImage: "vinyl.png",
@@ -61,65 +119,6 @@ const productsSeed = [
     ratings: [],
     category: "Vinyl",
   },
-  {
-    productImage: "cheese-queso-dip.png",
-    productName: "Queso Beso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
-    price: 14.49,
-    seller: "Garyphanalia",
-    ratings: [],
-    category: "G-things",
-  },
-  {
-    productImage: "quesoing.png",
-    productName: "Queso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
-    price: 2.49,
-    seller: "Garyphanalia",
-    ratings: [],
-    category: "G-things",
-  },
-  {
-    productImage: "scoville.png",
-    productName: "Scoville",
-    description:
-      "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
-    price: 62.0,
-    seller: "nathan",
-    ratings: [],
-    category: "Games",
-  },
-  {
-    productImage: "dragonsthree.png",
-    productName: "Dragon's Gold",
-    description:
-      "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
-    price: 16.98,
-    seller: "nathan",
-    ratings: [],
-    category: "Games",
-  },
-  {
-    productImage: "alhambra.png",
-    productName: "Alhambra",
-    description:
-      "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
-    price: 40.5,
-    seller: "nathan",
-    ratings: [],
-    category: "Games",
-  },
-  {
-    productImage: "tacocat.png",
-    productName: "TacoCat",
-    description:
-      "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
-    price: 15.0,
-    seller: "nathan",
-    ratings: [],
-    category: "Games",
-  },
-
   {
     productImage: "sixtyplate.png",
     productName: "Vintage Dude",
@@ -198,7 +197,7 @@ const productsSeed = [
     category: "Party Supplies",
   },
   {
-    productImage: "balloon.png",
+    productImage: "balloons.png",
     productName: "Balloons ",
     description:
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
@@ -255,18 +254,9 @@ const productsSeed = [
     ],
     category: "Party Supplies",
   },
+ 
   {
-    productImage: "dummy.png",
-    productName: "recycle",
-    description:
-      "Personalize your next big event with numbered floating helium balloon",
-    price: 5.0,
-    seller: "Kelsie",
-    ratings: [],
-    category: "Recycle",
-  },
-  {
-    productImage: "hatmaskcake.png",
+    productImage: "hatmaskcakes.png",
     productName: " Rotating cake with party hats",
     description: " Magic spin birthday cake with hats and masks",
     price: 15.0,
