@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Still working on seed files
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/onlineproducts"
-);
+const config = { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false };
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onlineproducts", config);
 
 const productsSeed = [
   {
@@ -14,17 +13,18 @@ const productsSeed = [
     price: 22.99,
     seller: "Garyphanalia",
     rating: 4,
-    category: "G-things"
-  },
+    category: "Gare Wares"
+  }, 
   {
     productImage: "outhouse.png",
     productName: "Portable Lavaratory",
-    description: "Get business done fast with this efficient and space saving carry anywhere potty",
+    description:
+      "Get business done fast with this efficient and space saving carry anywhere potty",
     price: 1999.99,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things"
-  },
+    category: "Gare Wares"
+  }, 
   {
     productImage: "vinyl.png",
     productName: "Records",
@@ -32,7 +32,7 @@ const productsSeed = [
     price: 3.14,
     seller: "luke",
     rating: 2,
-    category: "Vinyl"
+    category: "Vinyl",
   },
   {
     productImage: "cheese-queso-dip.png",
@@ -41,8 +41,8 @@ const productsSeed = [
     price: 14.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things"
-  },
+    category: "Gare Wares"
+  }, 
   {
     productImage: "quesoing.png",
     productName: "Queso",
@@ -50,59 +50,64 @@ const productsSeed = [
     price: 2.49,
     seller: "Garyphanalia",
     rating: 5,
-    category: "G-things",
+    category: "Gare Wares",
   },
   {
     productImage: "scoville.png",
     productName: "Scoville",
-    description: "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
-    price: 62.00,
+    description:
+      "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
+    price: 62.0,
     seller: "nathan",
     rating: 5,
-    category: "Games"
-  },
+    category: "Board Games"
+  }, 
   {
     productImage: "dragonsthree.png",
     productName: "Dragon's Gold",
-    description: "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
+    description:
+      "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
     price: 16.98,
     seller: "nathan",
     rating: 5,
-    category: "Games"
-  },
+    category: "Board Games"
+  }, 
   {
     productImage: "alhambra.png",
     productName: "Alhambra",
-    description: "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
-    price: 40.50,
+    description:
+      "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
+    price: 40.5,
     seller: "nathan",
     rating: 4,
-    category: "Games"
-  },
+    category: "Board Games"
+  }, 
   {
     productImage: "tacocat.png",
     productName: "TacoCat",
-    description: "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
-    price: 15.00,
+    description:
+      "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
+    price: 15.0,
     seller: "nathan",
     rating: 5,
-    category: "Games"
-  },
+    category: "Board Games"
+  }, 
 
   {
     productImage: "sixtyplate.png",
     productName: "Vintage Dude",
     description: "The man, the myth, and the legend, can all dine in style",
-    price: 2.00,
+    price: 2.0,
     seller: "saranya",
     rating: 5,
-    category: "Party Supplies",
+    category: "Vinyl",
   },
   {
     productImage: "goodbye.png",
     productName: "Goodbye Yellow Brick Road by Elton John",
-    description: "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
-    price: 28.00,
+    description:
+      "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
+    price: 28.0,
     seller: "Luke",
     rating: 5,
     category: "Vinyl",
@@ -110,8 +115,9 @@ const productsSeed = [
   {
     productImage: "darkside.png",
     productName: "The Dark Side of the Moon by Pink Floyd",
-    description: "An all-time great, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
-    price: 38.00,
+    description:
+      "An all-time at, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
+    price: 38.0,
     seller: "Luke",
     rating: 5,
     category: "Vinyl",
@@ -119,17 +125,19 @@ const productsSeed = [
   {
     productImage: "princeblack.png",
     productName: "The Black Album by Prince",
-    description: "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
-    price: 325.00,
+    description:
+      "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
+    price: 325.0,
     seller: "Luke",
     rating: 5,
-    category: "Vinyl"
+    category: "Vinyl",
   },
   {
     productImage: "blackstar.png",
     productName: " Black Star by David Bowie",
-    description: "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
-    price: 31.00,
+    description:
+      "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
+    price: 31.0,
     seller: "Luke",
     rating: 5,
     category: "Vinyl",
@@ -138,7 +146,7 @@ const productsSeed = [
     productImage: "pinata.png",
     productName: "Pinata",
     description: "Perfect activity for any age celebration",
-    price: 10.00,
+    price: 10.0,
     seller: "Saranya",
     rating: 4,
     category: "Party Supplies",
@@ -147,7 +155,7 @@ const productsSeed = [
     productImage: "curls.png",
     productName: "String Curls",
     description: "For any celebration",
-    price: 5.00,
+    price: 5.0,
     seller: "Saranya",
     rating: 4,
     category: "Party Supplies",
@@ -157,17 +165,17 @@ const productsSeed = [
     productName: "Graduation hats 2021",
     description:
       "A graduation hats for 2021.Add a special touch to the graduation celebration",
-    price: 10.00,
+    price: 10.0,
     seller: "Saranya",
     rating: 3,
     category: "Party Supplies",
   },
   {
-    productImage: "balloonz.png",
+    productImage: "balloon.png",
     productName: "Balloons ",
     description:
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
-    price: 5.00,
+    price: 5.0,
     seller: "Saranya",
     rating: 3,
     category: "Party Supplies",
@@ -177,25 +185,26 @@ const productsSeed = [
     productName: "Number Balloons",
     description:
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
-    price: 5.00,
+    price: 5.0,
     seller: "Saranya",
     rating: 3,
     category: "Party Supplies",
   },
   {
-    productImage: "sixtypop.png",
-    productName: "Number Balloons",
-    description: "Personalize your next big event with numbered floating helium balloon",
-    price: 5.00,
-    seller: "Saranya",
+    productImage: "dummy.png",
+    productName: "recycle",
+    description:
+      "Personalize your next big event with numbered floating helium balloon",
+    price: 5.0,
+    seller: "Kelsie",
     rating: 4,
-    category: "Party Supplies"
+    category: "Recycle",
   },
   {
     productImage: "hatmaskcake.png",
     productName: " Rotating cake with party hats",
     description: " Magic spin birthday cake with hats and masks",
-    price: 15.00,
+    price: 15.0,
     seller: "Saranya",
     rating: 4,
     category: "Party Supplies",

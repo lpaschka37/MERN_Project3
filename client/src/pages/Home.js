@@ -18,7 +18,7 @@ function Home() {
   // get all categories without duplicate
   const getAllCategory = () => {
     const allCategories = products.map((product) => product.category);
-    const uniqueCategory = new Set(allCategories); // return food,vinyl,party supplies,games
+    const uniqueCategory = new Set(allCategories); // return Gare Wares,Vinyl,Party Supplies, Board Games
     return Array.from(uniqueCategory);
   };
 
@@ -38,10 +38,12 @@ function Home() {
       iconClass = "fa-compact-disc";
     } else if (category === "Party Supplies") {
       iconClass = "fa-gifts";
-    } else if (category === "Board Game") {
+    } else if (category === "Board Games") {
       iconClass = "fa-dice";
+    } else if (category === "Gare Wares") {
+      iconClass = "fa-grin-wink";
     } else {
-      iconClass = "fa-random";
+      iconClass = "fa-recycle";
     }
     return iconClass;
   };
@@ -49,9 +51,9 @@ function Home() {
   return (
     <>
       <div
-        id="carouselExampleCaptions"
-        className="carousel"
-        data-bs-ride="carousel"
+        id="CarouselExampleCaptions"
+        className="Carousel"
+        data-bs-ride="Carousel"
       >
         <div className="carousel-indicators">
           <button
@@ -70,7 +72,7 @@ function Home() {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          <div className="carousel-item active" style={{ height: "301px" }}>
             <img
               src="/images/header.png"
               className="d-block w-100"
