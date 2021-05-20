@@ -200,7 +200,7 @@ function CheckOut(props) {
                           <option>West Virginia</option>
                           <option>Wisconsin</option>
                           <option>Wyoming</option>
-                          </select>
+                        </select>
                         <div className="invalid-feedback">
                           Please provide a valid state.
                         </div>
@@ -377,7 +377,7 @@ function CheckOut(props) {
                   <div className="col-md-12 order-md-2 mb-4"></div>
                   <h3 className="d-flex justify-content-between align-items-center mb-3">
                     Your cart summary
-                    <span style={{color: "#000"}} className="badge badge-secondary badge-pill">3</span>
+                    <span style={{ color: "#000" }} className="badge badge-secondary badge-pill">3</span>
                   </h3>
 
                   <ul className="list-group mb-3">
