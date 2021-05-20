@@ -72,7 +72,7 @@ function Home() {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          <div className="carousel-item active" style={{height:301}}>
             <img
               src="/images/header.png"
               className="d-block w-100"
