@@ -34,6 +34,10 @@ module.exports = {
       });
   },
 
+  login(req, res) {
+    // 
+  },
+
   findById(req, res) {
     db.User
       .findById(req.params.id)
