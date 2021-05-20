@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import ProductListPage from "./pages/ProductListPage";
 import CheckOut from "./pages/Checkout";
 import SignIn from "./pages/Signin";
+// import Cart from "./pages/Cart";           Cart fx not ready yet--kl
 
 function App() {
   // Setting global user logged in state
