@@ -5,7 +5,7 @@ import Products from "../components/Products/Products";
 import API from "../utils/API";
 
 function ProductListPage(props) {
-  const category = props.match.params.category;
+  const [category, setCategory] = useState([props.match.params.category]);
 
   const [productLists, setProductLists] = useState([]);
 
@@ -21,8 +21,9 @@ function ProductListPage(props) {
 
   // useEffect
   useEffect(() => {
+    setCategory(props.match.params.category);
     loadProductsByCategory();
-  }, [props]);
+  }, []);
 
   return (
     <>
@@ -30,11 +31,11 @@ function ProductListPage(props) {
         title={`Welcome to ${category} Products`}
         subtitle={`Please select from ${category} below and add to cart.`}
       />
-      <div class="album py-5 bg-dark-custom">
-        <div class="container">
+      <div className="album py-5 bg-dark-custom">
+        <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             {productLists.map((product) => (
-              <Products product={product} />
+              <Products product={product} cart={props.cart} setCart={props.setCart} />
             ))}
           </div>
         </div>

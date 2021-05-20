@@ -2,19 +2,21 @@
 /* eslint-disable no-unused-vars */
 // TODO: needs finishing
 
-import React from "react";
+import { React, useState, useEffect } from "react";
 import _ from "lodash";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
-import Products from "../components/Products/Products";
-
-const ItemInCarts = [];
-
 function CheckOut(props) {
-  const total = _.sumBy(
-    ItemInCarts,
-    (ItemInCart) => ItemInCart.price * ItemInCart.addToCart.quantity
-  );
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    console.log("useeffect prop cart", props.cart);
+    setCartItems(props.cart);
+  }, [props]);
+
+  function removeFromCart(index) {
+    console.log("removing", index);
+  }
 
   return (
     <>
@@ -41,7 +43,6 @@ function CheckOut(props) {
                           className="form-control"
                           id="firstName"
                           placeholder=""
-                          value=""
                           required
                         />
                         <div className="invalid-feedback">
@@ -55,7 +56,6 @@ function CheckOut(props) {
                           className="form-control"
                           id="lastName"
                           placeholder=""
-                          value=""
                           required
                         />
                         <div className="invalid-feedback">
@@ -79,7 +79,7 @@ function CheckOut(props) {
                         />
                         <div
                           className="invalid-feedback"
-                          style={{ width: "100%;" }}
+                          style={{ width: "100%" }}
                         >
                           Your username is required.
                         </div>
@@ -256,7 +256,7 @@ function CheckOut(props) {
                         name="paymentMethod"
                         type="radio"
                         className="custom-control-input"
-                        checked
+                        defaultChecked
                         required
                       />
                       <label className="custom-control-label" htmlFor="credit">
@@ -368,26 +368,26 @@ function CheckOut(props) {
                   <div className="col-md-12 order-md-2 mb-4"></div>
                   <h3 className="d-flex justify-content-between align-items-center mb-3">
                     Your cart summary
-                    <span style={{ color: "#000" }} className="badge badge-secondary badge-pill">3</span>
+                    <span style={{ color: "#000" }} className="badge badge-secondary badge-pill">{cartItems ? cartItems.length : 0}</span>
                   </h3>
 
                   <ul className="list-group mb-3">
                     <li className="list-group-item d-flex justify-content-between lh-condensed"></li>
-                    {ItemInCarts.map((ItemInCart) => (
-                      <li className="list-group-item d-flex justify-content-between lh-condensed">
+                    {cartItems && cartItems.map((ItemInCart, index) => (
+                      <li key={index}className="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                           <h6 className="my-0">{ItemInCart.productName}</h6>
                           <img
                             style={{ maxWidth: "20%" }}
-                            src={ItemInCart.productImage}
+                            src={`/images/${ItemInCart.productImage}`}
                             alt="..."
                           />
-                          <small className="text-muted">
-                            Brief description
-                          </small>
+                          <span className="text-muted">
+                            ${ItemInCart.price}
+                          </span>
                         </div>
                         <span className="text-muted">
-                          ${ItemInCart.price * ItemInCart.addToCart.quantity}
+                          <button onClick={() => removeFromCart(index)} className="btn btn-danger">-</button>
                         </span>
                         {/* <div className="row">
                                             <div className="col-2"> <img src={ItemInCart.productImage} alt="..."  height="50px" width="50px" /> </div>
@@ -398,7 +398,7 @@ function CheckOut(props) {
                     ))}
                     <li className="list-group-item d-flex justify-content-between">
                       <span>Total (USD)</span>
-                      <strong>${total}</strong>
+                      <strong>${cartItems.reduce((acc, curr) => acc + curr.price * 100, 0) / 100}</strong>
                     </li>
                   </ul>
                 </div>

@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-underscore-dangle */
 import React, { useState, useEffect } from "react";
 // import Rating from "./Rating";
@@ -11,9 +12,16 @@ function Products(props) {
   const [product, setProduct] = useState(props.product);
   const [showRated, setShowRated] = useState(false);
 
+  const cart = props.cart;
+  const setCart = props.setCart;
+
   useEffect(() => {
     setProduct(props.product);
   }, [props]);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const calculateRating = () => Math.floor(
     _.sumBy(product.ratings, (rating) => rating.rate) / product.ratings.length
@@ -34,6 +42,11 @@ function Products(props) {
     } catch (err) {
       console.log(err.message);
     }
+  };
+
+  const addToCart = (event, productData) => {
+    event.preventDefault();
+    setCart((cartT) => [...cartT, productData]);
   };
 
   return (
@@ -80,8 +93,7 @@ function Products(props) {
                 </div>
               )}
             </div>
-            
-            <button className="btn cart-btn">Add to Cart</button>
+            <button onClick={(e) => addToCart(e, product)} className="btn cart-btn">Add to Cart</button>
           </div>
         </div>
       </div>
