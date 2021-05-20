@@ -219,7 +219,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         id="same-address"
                       />
-                      <label className="custom-control-label" htmlFor="same-address">
+                      <label className="custom-control-label px-2" htmlFor="same-address">
                          Shipping address is the same as my billing address
                       </label>
                     </div>
@@ -229,7 +229,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         id="save-info"
                       />
-                      <label className="custom-control-label" htmlFor="save-info">
+                      <label className="custom-control-label px-2" htmlFor="save-info">
                         Save this information for next time
                       </label>
                     </div>
@@ -259,7 +259,7 @@ function CheckOut(props) {
                         defaultChecked
                         required
                       />
-                      <label className="custom-control-label" htmlFor="credit">
+                      <label className="custom-control-label px-2" htmlFor="credit">
                         Credit card
                       </label>
                     </div>
@@ -271,7 +271,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         required
                       />
-                      <label className="custom-control-label" htmlFor="free">
+                      <label className="custom-control-label px-2" htmlFor="free">
                         Free
                       </label>
                     </div>
@@ -283,7 +283,7 @@ function CheckOut(props) {
                         className="custom-control-input"
                         required
                       />
-                      <label className="custom-control-label" htmlFor="Make an offer">
+                      <label className="custom-control-label px-2" htmlFor="Make an offer">
                         Dodge Coin
                       </label>
                     </div>
@@ -362,7 +362,7 @@ function CheckOut(props) {
             </div>
 
             {/* Your cart summary */}
-            <div className="col-lg-3 col-md-2 col-sm-12">
+            <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="card shadow-sm">
                 <div className="custom-card-dark p-4">
                   <div className="col-md-12 order-md-2 mb-4"></div>
@@ -376,13 +376,13 @@ function CheckOut(props) {
                     {cartItems && cartItems.map((ItemInCart, index) => (
                       <li key={index}className="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                          <h6 className="my-0">{ItemInCart.productName}</h6>
+                          <h6 className="my-2">{ItemInCart.productName}</h6>
                           <img
                             style={{ maxWidth: "20%" }}
                             src={`/images/${ItemInCart.productImage}`}
                             alt="..."
                           />
-                          <span className="text-muted">
+                          <span className="px-2">
                             ${ItemInCart.price}
                           </span>
                         </div>

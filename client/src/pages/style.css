@@ -197,6 +197,8 @@ a.navbar-brand {
 .ft-icon {
   color: #66fcf1;
   font-size: 25px;
+  background: none;
+  border: none;
 }
 
 .fa-circle {
