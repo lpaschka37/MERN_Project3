@@ -28,10 +28,10 @@ function NavTop(props) {
             className="custom-drop"
             id="collapsible-nav-dropdown"
           >
-            <NavDropdown.Item href="/#/Vinyl">Vinyl</NavDropdown.Item>
-            <NavDropdown.Item href="/#/Gare Wares">Gare Wares</NavDropdown.Item>
-            <NavDropdown.Item href="/#/Board Games">Board Games</NavDropdown.Item>
-            <NavDropdown.Item href="/#/Party Supplies">Party Supplies</NavDropdown.Item>
+            <NavDropdown.Item href="/#/Vinyl/productlist">Vinyl</NavDropdown.Item>
+            <NavDropdown.Item href="/#/Gare Wares/productlist">Gare Wares</NavDropdown.Item>
+            <NavDropdown.Item href="/#/Board Games/productlist">Board Games</NavDropdown.Item>
+            <NavDropdown.Item href="/#/Party Supplies/productlist">Party Supplies</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/#/checkout" className="primary-col">
             <i className="fas fa-shopping-cart"></i> Cart
