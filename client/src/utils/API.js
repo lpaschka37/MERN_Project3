@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
 
 export default {
@@ -18,14 +17,18 @@ export default {
   saveUsers(userData) {
     return axios.post("/api/users", userData);
   },
+  loginUser(userData) {
+    return axios.post("/api/users/login", userData);
+  },
+
   // Gets all Products
-  getProducts: async function () {
+  async getProducts() {
     console.log("api here");
     const dataGet = await axios.get("/api/products");
     console.log("API:", dataGet);
     return dataGet;
   },
-  getProductsByCategory: async function (category) {
+  async getProductsByCategory(category) {
     console.log("api here");
     const dataGet = await axios.get(`/api/products/category/${category}`);
     console.log("API:Category", dataGet);

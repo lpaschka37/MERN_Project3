@@ -15,14 +15,14 @@ function Home() {
     }
   };
 
-  //get all categories without duplicate
+  // get all categories without duplicate
   const getAllCategory = () => {
     const allCategories = products.map((product) => product.category);
-    const uniqueCategory = new Set(allCategories); //return Gare Wares,Vinyl,Party Supplies, Board Games
+    const uniqueCategory = new Set(allCategories); // return Gare Wares,Vinyl,Party Supplies, Board Games
     return Array.from(uniqueCategory);
   };
 
-  //useEffect
+  // useEffect
   useEffect(() => {
     console.log("using effect");
     loadProducts();
@@ -52,7 +52,7 @@ function Home() {
     <>
       <div
         id="CarouselExampleCaptions"
-        className="Carousel"
+        className="carousel"
         data-bs-ride="Carousel"
       >
         <div className="carousel-indicators">
@@ -72,7 +72,7 @@ function Home() {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active" style={{height:301}}>
+          <div className="carousel-item active" style={{ height: "301px" }}>
             <img
               src="/images/header.png"
               className="d-block w-100"
@@ -128,7 +128,7 @@ function Home() {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 col-lg-12">
               {categories.map((category) => (
                 <div className="col-lg-3 mb-3">
-                  <a href={`/${category}/productlist`}>
+                  <a href={`/#/${category}/productlist`}>
                     <div className="card custom-card-dark">
                       <div className="icon">
                         <i

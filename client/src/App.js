@@ -1,6 +1,6 @@
-import React from "react";
-import "../src/pages/style.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import "./pages/style.css";
+import { HashRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import NavTop from "./components/NavTop/NavTop";
@@ -10,14 +10,24 @@ import CheckOut from "./pages/Checkout";
 import SignIn from "./pages/Signin";
 
 function App() {
+  // Setting global user logged in state
+  const [signedIn, setSignedIn] = useState("");
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      setSignedIn(loggedInUser);
+    }
+  }, []);
+
   return (
     // Put Products into state
     <Router>
-      <NavTop />
+      <NavTop user={signedIn}/>
       <Route exact path="/" component={Home} />
       <Route exact path="/:category/productlist" component={ProductListPage} />
       <Route exact path="/checkout" component={CheckOut} />
-      <Route exact path="/signin" component={SignIn} />
+      <Route exact path="/signin" render={(props) => <SignIn {...props} user={signedIn} setuser={setSignedIn}/> } />
       <Footer />
     </Router>
   );
