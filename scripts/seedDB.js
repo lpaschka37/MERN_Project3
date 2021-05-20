@@ -75,7 +75,7 @@ const productsSeed = [
     productName: "Scoville",
     description:
       "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
-    price: 62.0,
+    price: 62.99,
     seller: "nathan",
     ratings: [],
     category: "Board Games",
@@ -105,7 +105,7 @@ const productsSeed = [
     productName: "TacoCat",
     description:
       "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
-    price: 15.0,
+    price: 15.99,
     seller: "nathan",
     ratings: [],
     category: "Board Games",
@@ -123,7 +123,7 @@ const productsSeed = [
     productImage: "sixtyplate.png",
     productName: "Vintage Dude",
     description: "The man, the myth, and the legend, can all dine in style",
-    price: 2.0,
+    price: 2.99,
     seller: "saranya",
     ratings: [],
     category: "Vinyl",
@@ -133,7 +133,7 @@ const productsSeed = [
     productName: "Goodbye Yellow Brick Road by Elton John",
     description:
       "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
-    price: 28.0,
+    price: 28.99,
     seller: "Luke",
     ratings: [],
     category: "Vinyl",
@@ -143,7 +143,7 @@ const productsSeed = [
     productName: "The Dark Side of the Moon by Pink Floyd",
     description:
       "An all-time at, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
-    price: 38.0,
+    price: 38.99,
     seller: "Luke",
     ratings: [],
     category: "Vinyl",
@@ -153,7 +153,7 @@ const productsSeed = [
     productName: "The Black Album by Prince",
     description:
       "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
-    price: 325.0,
+    price: 325.99,
     seller: "Luke",
     ratings: [],
     category: "Vinyl",
@@ -163,7 +163,7 @@ const productsSeed = [
     productName: " Black Star by David Bowie",
     description:
       "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
-    price: 31.0,
+    price: 31.99,
     seller: "Luke",
     ratings: [],
     category: "Vinyl",
@@ -172,7 +172,7 @@ const productsSeed = [
     productImage: "pinata.png",
     productName: "Pinata",
     description: "Perfect activity for any age celebration",
-    price: 10.0,
+    price: 10.99,
     seller: "Saranya",
     ratings: [],
     category: "Party Supplies",
@@ -181,7 +181,7 @@ const productsSeed = [
     productImage: "curls.png",
     productName: "String Curls",
     description: "For any celebration",
-    price: 5.0,
+    price: 5.99,
     seller: "Saranya",
     ratings: [],
     category: "Party Supplies",
@@ -191,7 +191,7 @@ const productsSeed = [
     productName: "Graduation hats 2021",
     description:
       "A graduation hats for 2021.Add a special touch to the graduation celebration",
-    price: 10.0,
+    price: 10.99,
     seller: "Saranya",
     ratings: [],
     category: "Party Supplies",
@@ -201,7 +201,7 @@ const productsSeed = [
     productName: "Balloons ",
     description:
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
-    price: 5.0,
+    price: 5.99,
     seller: "Saranya",
     ratings: [
       {
@@ -230,7 +230,7 @@ const productsSeed = [
     productName: "Number Balloons",
     description:
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
-    price: 5.0,
+    price: 5.99,
     seller: "Saranya",
     ratings: [
       {
@@ -259,7 +259,7 @@ const productsSeed = [
     productImage: "hatmaskcakes.png",
     productName: " Rotating cake with party hats",
     description: " Magic spin birthday cake with hats and masks",
-    price: 15.0,
+    price: 15.99,
     seller: "Saranya",
     ratings: [],
     category: "Party Supplies",
