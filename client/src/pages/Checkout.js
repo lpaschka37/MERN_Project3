@@ -8,17 +8,15 @@ import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
 function CheckOut(props) {
   const [cartItems, setCartItems] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
-    console.log(props.cart);
+    console.log("useeffect prop cart", props.cart);
     setCartItems(props.cart);
   }, [props]);
 
-  // const total = _.sumBy(
-  //   cartItems,
-  //   (ItemInCart) => ItemInCart.price * ItemInCart.addToCart.quantity
-  // );
+  function removeFromCart(index) {
+    console.log("removing", index);
+  }
 
   return (
     <>
@@ -384,21 +382,21 @@ function CheckOut(props) {
 
                   <ul className="list-group mb-3">
                     <li className="list-group-item d-flex justify-content-between lh-condensed"></li>
-                    {cartItems && cartItems.map((ItemInCart) => (
-                      <li className="list-group-item d-flex justify-content-between lh-condensed">
+                    {cartItems && cartItems.map((ItemInCart, index) => (
+                      <li key={index}className="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                           <h6 className="my-0">{ItemInCart.productName}</h6>
                           <img
                             style={{ maxWidth: "20%" }}
-                            src={ItemInCart.productImage}
+                            src={`/images/${ItemInCart.productImage}`}
                             alt="..."
                           />
-                          <small className="text-muted">
-                            Brief description
-                          </small>
+                          <span className="text-muted">
+                            ${ItemInCart.price}
+                          </span>
                         </div>
                         <span className="text-muted">
-                          ${ItemInCart.price * ItemInCart.quantity}
+                          <button onClick={() => removeFromCart(index)} className="btn btn-danger">-</button>
                         </span>
                         {/* <div className="row">
                                             <div className="col-2"> <img src={ItemInCart.productImage} alt="..."  height="50px" width="50px" /> </div>
@@ -409,7 +407,7 @@ function CheckOut(props) {
                     ))}
                     <li className="list-group-item d-flex justify-content-between">
                       <span>Total (USD)</span>
-                      <strong>${cartTotal}</strong>
+                      <strong>${cartItems.reduce((acc, curr) => acc + curr.price * 100, 0) / 100}</strong>
                     </li>
                   </ul>
                 </div>

@@ -35,7 +35,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/:category/productlist" component={(props) => <ProductListPage {...props} cart={cart} setCart={setCart} />} />
       <Route exact path="/checkout" component={(props) => <CheckOut {...props} cart={cart} setCart={setCart} />} />
-      <Route exact path="/signin" render={(props) => <SignIn {...props} user={signedIn} setuser={setSignedIn}/> } />
+      <Route exact path="/signin" render={(props) => <SignIn {...props} user={signedIn} setuser={setSignedIn} /> } />
       <Footer />
     </Router>
   );
