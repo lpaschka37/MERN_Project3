@@ -52,7 +52,7 @@ function Home() {
     <>
       <div
         id="CarouselExampleCaptions"
-        className="Carousel"
+        className="carousel"
         data-bs-ride="Carousel"
       >
         <div className="carousel-indicators">
