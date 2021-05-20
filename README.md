@@ -88,7 +88,7 @@ After cloning the repo, install the required npm packages, use the command line 
 
 ## Resource links
 
-Github repository URl : https://github.com/lpaschka37/MERN_Project3
+Github repository URL : https://github.com/lpaschka37/MERN_Project3
 
 Heroku Deployed URL : https://pure-shore-88337.herokuapp.com/#/
 

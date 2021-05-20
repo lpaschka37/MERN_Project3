@@ -24,11 +24,17 @@ function App() {
   return (
     // Put Products into state
     <Router>
-      <NavTop user={signedIn}/>
+      <NavTop user={signedIn} setuser={setSignedIn} />
       <Route exact path="/" component={Home} />
       <Route exact path="/:category/productlist" component={ProductListPage} />
       <Route exact path="/checkout" component={CheckOut} />
-      <Route exact path="/signin" render={(props) => <SignIn {...props} user={signedIn} setuser={setSignedIn}/> } />
+      <Route
+        exact
+        path="/signin"
+        render={(props) => (
+          <SignIn {...props} user={signedIn} setuser={setSignedIn} />
+        )}
+      />
       <Footer />
     </Router>
   );
