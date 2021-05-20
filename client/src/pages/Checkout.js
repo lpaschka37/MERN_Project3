@@ -200,7 +200,7 @@ function CheckOut(props) {
                           <option>West Virginia</option>
                           <option>Wisconsin</option>
                           <option>Wyoming</option>
-                          </select>
+                        </select>
                         <div className="invalid-feedback">
                           Please provide a valid state.
                         </div>
