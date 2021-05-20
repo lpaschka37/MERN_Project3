@@ -50,7 +50,7 @@ function Products(props) {
             <div className="prod-desc">
               <p className="card-text-product">{product.description}</p>
             </div>
-            <div className="card-price" style={{ fontWeight: "bold" }}> Price: $ {product.price}</div>
+            <div className="card-price" style={{ fontWeight: "bold" }}> Price: ${product.price}</div>
             <div className="d-flex align-items-center mb-3">
               <StarRatingComponent
                 name="rate1"
