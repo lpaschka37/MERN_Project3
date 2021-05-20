@@ -10,39 +10,39 @@ const productsSeed = [
   {
     productImage: "light.png",
     productName: "A light",
-    description: "For all your bright ideas",    
+    description: "For all your bright ideas",
     price: 22.99,
     seller: "Garyphanalia",
     rating: 4,
     category: "G-things"
-  }, 
+  },
   {
     productImage: "outhouse.png",
     productName: "Portable Lavaratory",
-    description: "Get business done fast with this efficient and space saving carry anywhere potty",    
+    description: "Get business done fast with this efficient and space saving carry anywhere potty",
     price: 1999.99,
     seller: "Garyphanalia",
     rating: 5,
     category: "G-things"
-  }, 
+  },
   {
     productImage: "vinyl.png",
     productName: "Records",
-    description: "Mystery Deal",    
+    description: "Mystery Deal",
     price: 3.14,
     seller: "luke",
     rating: 2,
     category: "Vinyl"
-  }, 
+  },
   {
     productImage: "cheese-queso-dip.png",
     productName: "Queso Beso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",    
+    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
     price: 14.49,
     seller: "Garyphanalia",
     rating: 5,
     category: "G-things"
-  }, 
+  },
   {
     productImage: "quesoing.png",
     productName: "Queso",
@@ -55,43 +55,43 @@ const productsSeed = [
   {
     productImage: "scoville.png",
     productName: "Scoville",
-    description: "A plunge into a pepper planters plan, strategize your field to win the chili contest!",    
+    description: "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
     price: 62.00,
     seller: "nathan",
     rating: 5,
     category: "Games"
-  }, 
+  },
   {
     productImage: "dragonsthree.png",
     productName: "Dragon's Gold",
-    description: "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",    
+    description: "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
     price: 16.98,
     seller: "nathan",
     rating: 5,
     category: "Games"
-  }, 
+  },
   {
     productImage: "alhambra.png",
     productName: "Alhambra",
-    description: "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",    
+    description: "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
     price: 40.50,
     seller: "nathan",
     rating: 4,
     category: "Games"
-  }, 
+  },
   {
     productImage: "tacocat.png",
     productName: "TacoCat",
-    description: "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",    
+    description: "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
     price: 15.00,
     seller: "nathan",
     rating: 5,
     category: "Games"
-  }, 
+  },
 
   {
     productImage: "sixtyplate.png",
-    productName:  "Vintage Dude",
+    productName: "Vintage Dude",
     description: "The man, the myth, and the legend, can all dine in style",
     price: 2.00,
     seller: "saranya",
@@ -100,7 +100,7 @@ const productsSeed = [
   },
   {
     productImage: "goodbye.png",
-    productName:  "Goodbye Yellow Brick Road by Elton John",
+    productName: "Goodbye Yellow Brick Road by Elton John",
     description: "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
     price: 28.00,
     seller: "Luke",
@@ -109,7 +109,7 @@ const productsSeed = [
   },
   {
     productImage: "darkside.png",
-    productName:  "The Dark Side of the Moon by Pink Floyd",
+    productName: "The Dark Side of the Moon by Pink Floyd",
     description: "An all-time great, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
     price: 38.00,
     seller: "Luke",
@@ -118,7 +118,7 @@ const productsSeed = [
   },
   {
     productImage: "princeblack.png",
-    productName:  "The Black Album by Prince",
+    productName: "The Black Album by Prince",
     description: "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
     price: 325.00,
     seller: "Luke",
@@ -127,7 +127,7 @@ const productsSeed = [
   },
   {
     productImage: "blackstar.png",
-    productName:  " Black Star by David Bowie",
+    productName: " Black Star by David Bowie",
     description: "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
     price: 31.00,
     seller: "Luke",
@@ -136,7 +136,7 @@ const productsSeed = [
   },
   {
     productImage: "pinata.png",
-    productName:  "Pinata",
+    productName: "Pinata",
     description: "Perfect activity for any age celebration",
     price: 10.00,
     seller: "Saranya",
@@ -145,7 +145,7 @@ const productsSeed = [
   },
   {
     productImage: "curls.png",
-    productName:  "String Curls",
+    productName: "String Curls",
     description: "For any celebration",
     price: 5.00,
     seller: "Saranya",
@@ -185,11 +185,11 @@ const productsSeed = [
   {
     productImage: "sixtypop.png",
     productName: "Number Balloons",
-    description: "Personalize your next big event with numbered floating helium balloon",    
+    description: "Personalize your next big event with numbered floating helium balloon",
     price: 5.00,
     seller: "Saranya",
     rating: 4,
-    category: "Party supplies"
+    category: "Party Supplies"
   },
   {
     productImage: "hatmaskcake.png",
@@ -205,7 +205,7 @@ const productsSeed = [
 db.Products.remove({})
   .then(() => db.Products.collection.insertMany(productsSeed))
   .then((data) => {
-    console.log(data.result.n + " records inserted!");
+    console.log(`${data.result.n} records inserted!`);
     process.exit(0);
   })
   .catch((err) => {
@@ -247,7 +247,7 @@ const userSeed = [
 db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then((data) => {
-    console.log(data.result.n + " records inserted!");
+    console.log(`${data.result.n} records inserted!`);
     process.exit(0);
   })
   .catch((err) => {
