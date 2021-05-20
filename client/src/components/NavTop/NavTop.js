@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function NavTop() {
+function NavTop(props) {
   return (
     <Navbar
       collapseOnSelect
@@ -37,7 +37,7 @@ function NavTop() {
             <i className="fas fa-shopping-cart"></i> Cart
           </Nav.Link>
           <Nav.Link href="/signin" className="primary-col">
-            <i className="fas fa-user"></i> Login
+            <i className="fas fa-user"></i>{(props.user) ? " Logout" : " Login"}
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

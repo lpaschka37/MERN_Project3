@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./pages/style.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,11 +13,17 @@ function App() {
   // Setting global user logged in state
   const [signedIn, setSignedIn] = useState("");
 
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      setSignedIn(loggedInUser);
+    }
+  }, []);
+
   return (
     // Put Products into state
     <Router>
-      <p>{signedIn} is signed in</p>
-      <NavTop />
+      <NavTop user={signedIn}/>
       <Route exact path="/" component={Home} />
       <Route exact path="/:category/productlist" component={ProductListPage} />
       <Route exact path="/checkout" component={CheckOut} />
