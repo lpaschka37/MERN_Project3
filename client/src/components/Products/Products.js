@@ -38,7 +38,7 @@ function Products(props) {
 
   return (
     <>
-      <div className="col">
+      <div className="col prod-card">
         <div className="card shadow-sm mb-4">
           <img
             src={`/images/${product.productImage}`}
@@ -50,7 +50,7 @@ function Products(props) {
             <div className="prod-desc">
               <p className="card-text-product">{product.description}</p>
             </div>
-            <div className="card-text-product">Price: $ {product.price}</div>
+            <div className="card-price" style={{ fontWeight: "bold" }}> Price: $ {product.price}</div>
             <div className="d-flex align-items-center mb-3">
               <StarRatingComponent
                 name="rate1"
@@ -60,29 +60,27 @@ function Products(props) {
                 className=""
               />
               {showRated ? (
-                <div className="col-3 mx-1 text-left">Rated</div>
+                <div className="col-3 mx-1 text-left" style={{ fontWeight: "bold" }}>Rated</div>
               ) : (
-                <div
-                  className="col-3 mx-1 text-left"
-                  onClick={() => setShowGiveRating(true)}
-                >
-                  Give Rating
+                <div className="col-3 mx-1 text-left" onClick={() => setShowGiveRating(true)}>
+                  <button className="rate-btn">Rate Product</button>
                 </div>
               )}
               {showGiveRating && (
-                <div className="border px-2 col-6">
+
+                <div className="px-4 mt-3 col-6">
                   <span className="fst-italic fw-light">
-                    click star to rate
+                    choose rating
                   </span>
                   <StarRatingComponent
-                    name="rate2"
-                    starCount={5}
+                    name="rate2" starCount={5}
                     value={ratingValue}
                     onStarClick={enterRating.bind(enterRating)}
                   />
                 </div>
               )}
             </div>
+            
             <button className="btn cart-btn">Add to Cart</button>
           </div>
         </div>
