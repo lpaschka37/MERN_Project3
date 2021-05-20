@@ -14,7 +14,6 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findByCategory(req, res) {
-    console.log("category...", req.params.category);
     db.Products.find({ category: req.params.category })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
@@ -26,6 +25,16 @@ module.exports = {
   },
   update(req, res) {
     db.Products.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
+  updateRating(req, res) {
+    console.log("Rating...", req.body);
+    db.Products.findOneAndUpdate(
+      { _id: req.params.id },
+      { $push: { ratings: req.body } },
+      { new: true }
+    )
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
