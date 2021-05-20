@@ -67,7 +67,6 @@ function SigninPage(props) {
             "Register or sign in."
           }
         />
-      <p>{signedInUser} is logged in</p>
       <div className="album py-5 bg-dark-custom">
         <div className="container-fluid">
 
