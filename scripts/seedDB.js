@@ -2,8 +2,16 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Still working on seed files
-const config = { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false };
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onlineproducts", config);
+const config = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+};
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/onlineproducts",
+  config
+);
 
 const productsSeed = [
   {
@@ -12,9 +20,28 @@ const productsSeed = [
     description: "For all your bright ideas",
     price: 22.99,
     seller: "Garyphanalia",
-    rating: 4,
-    category: "Gare Wares"
-  }, 
+    ratings: [
+      {
+        rate: 3,
+      },
+      {
+        rate: 4,
+      },
+      {
+        rate: 5,
+      },
+      {
+        rate: 1,
+      },
+      {
+        rate: 5,
+      },
+      {
+        rate: 3,
+      },
+    ],
+    category: "G-things",
+  },
   {
     productImage: "outhouse.png",
     productName: "Portable Lavaratory",
@@ -22,16 +49,16 @@ const productsSeed = [
       "Get business done fast with this efficient and space saving carry anywhere potty",
     price: 1999.99,
     seller: "Garyphanalia",
-    rating: 5,
-    category: "Gare Wares"
-  }, 
+    ratings: [],
+    category: "G-things",
+  },
   {
     productImage: "vinyl.png",
     productName: "Records",
     description: "Mystery Deal",
     price: 3.14,
     seller: "luke",
-    rating: 2,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -40,17 +67,17 @@ const productsSeed = [
     description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
     price: 14.49,
     seller: "Garyphanalia",
-    rating: 5,
-    category: "Gare Wares"
-  }, 
+    ratings: [],
+    category: "G-things",
+  },
   {
     productImage: "quesoing.png",
     productName: "Queso",
     description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
     price: 2.49,
     seller: "Garyphanalia",
-    rating: 5,
-    category: "Gare Wares",
+    ratings: [],
+    category: "G-things",
   },
   {
     productImage: "scoville.png",
@@ -59,9 +86,9 @@ const productsSeed = [
       "A plunge into a pepper planters plan, strategize your field to win the chili contest!",
     price: 62.0,
     seller: "nathan",
-    rating: 5,
-    category: "Board Games"
-  }, 
+    ratings: [],
+    category: "Games",
+  },
   {
     productImage: "dragonsthree.png",
     productName: "Dragon's Gold",
@@ -69,9 +96,9 @@ const productsSeed = [
       "Slay Dragons! Get Gold! From Bruno Faidutti, the award-winning designer of Citadels, comes a killer game of negotiation and fantastical proportions!",
     price: 16.98,
     seller: "nathan",
-    rating: 5,
-    category: "Board Games"
-  }, 
+    ratings: [],
+    category: "Games",
+  },
   {
     productImage: "alhambra.png",
     productName: "Alhambra",
@@ -79,9 +106,9 @@ const productsSeed = [
       "Alhambra is a 2003 tile-based German-style board game designed by Dirk Henn.",
     price: 40.5,
     seller: "nathan",
-    rating: 4,
-    category: "Board Games"
-  }, 
+    ratings: [],
+    category: "Games",
+  },
   {
     productImage: "tacocat.png",
     productName: "TacoCat",
@@ -89,9 +116,9 @@ const productsSeed = [
       "A lil’ board game with a cat who is also a taco. With Tacocat on the line, anything can happen in this palindrome-powered tug-of-war!",
     price: 15.0,
     seller: "nathan",
-    rating: 5,
-    category: "Board Games"
-  }, 
+    ratings: [],
+    category: "Games",
+  },
 
   {
     productImage: "sixtyplate.png",
@@ -99,7 +126,7 @@ const productsSeed = [
     description: "The man, the myth, and the legend, can all dine in style",
     price: 2.0,
     seller: "saranya",
-    rating: 5,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -109,7 +136,7 @@ const productsSeed = [
       "Sir Elton’s best offering is a majestic piece of piano pop and glam rock gold",
     price: 28.0,
     seller: "Luke",
-    rating: 5,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -119,7 +146,7 @@ const productsSeed = [
       "An all-time at, this album has become embedded in our cultural fabric. Musically, it’s groundbreaking, flexing uncharted studio prowess.",
     price: 38.0,
     seller: "Luke",
-    rating: 5,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -129,7 +156,7 @@ const productsSeed = [
       "This one always shows up if you’re browsing the web for the most valuable vinyl record. ",
     price: 325.0,
     seller: "Luke",
-    rating: 5,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -139,7 +166,7 @@ const productsSeed = [
       "Bowie’s discography is marvelous from start to finish but there’s something both glorious and haunting about his final work.",
     price: 31.0,
     seller: "Luke",
-    rating: 5,
+    ratings: [],
     category: "Vinyl",
   },
   {
@@ -148,7 +175,7 @@ const productsSeed = [
     description: "Perfect activity for any age celebration",
     price: 10.0,
     seller: "Saranya",
-    rating: 4,
+    ratings: [],
     category: "Party Supplies",
   },
   {
@@ -157,7 +184,7 @@ const productsSeed = [
     description: "For any celebration",
     price: 5.0,
     seller: "Saranya",
-    rating: 4,
+    ratings: [],
     category: "Party Supplies",
   },
   {
@@ -167,7 +194,7 @@ const productsSeed = [
       "A graduation hats for 2021.Add a special touch to the graduation celebration",
     price: 10.0,
     seller: "Saranya",
-    rating: 3,
+    ratings: [],
     category: "Party Supplies",
   },
   {
@@ -177,7 +204,26 @@ const productsSeed = [
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
     price: 5.0,
     seller: "Saranya",
-    rating: 3,
+    ratings: [
+      {
+        rate: 2,
+      },
+      {
+        rate: 3,
+      },
+      {
+        rate: 5,
+      },
+      {
+        rate: 5,
+      },
+      {
+        rate: 5,
+      },
+      {
+        rate: 5,
+      },
+    ],
     category: "Party Supplies",
   },
   {
@@ -187,7 +233,26 @@ const productsSeed = [
       "Personalize your next big event with the Spritz Number 0 floating helium balloon",
     price: 5.0,
     seller: "Saranya",
-    rating: 3,
+    ratings: [
+      {
+        rate: 1,
+      },
+      {
+        rate: 1,
+      },
+      {
+        rate: 2,
+      },
+      {
+        rate: 3,
+      },
+      {
+        rate: 3,
+      },
+      {
+        rate: 2,
+      },
+    ],
     category: "Party Supplies",
   },
   {
@@ -197,7 +262,7 @@ const productsSeed = [
       "Personalize your next big event with numbered floating helium balloon",
     price: 5.0,
     seller: "Kelsie",
-    rating: 4,
+    ratings: [],
     category: "Recycle",
   },
   {
@@ -206,7 +271,7 @@ const productsSeed = [
     description: " Magic spin birthday cake with hats and masks",
     price: 15.0,
     seller: "Saranya",
-    rating: 4,
+    ratings: [],
     category: "Party Supplies",
   },
 ];

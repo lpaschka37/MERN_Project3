@@ -7,13 +7,13 @@ import API from "../utils/API";
 function ProductListPage(props) {
   const category = props.match.params.category;
 
-  const [productList, setProductList] = useState([]);
+  const [productLists, setProductLists] = useState([]);
 
   // Loads all products into state
   const loadProductsByCategory = async () => {
     try {
       const prods = await API.getProductsByCategory(category);
-      setProductList(prods.data);
+      setProductLists(prods.data);
     } catch (err) {
       console.log(err.message);
     }
@@ -24,7 +24,7 @@ function ProductListPage(props) {
     loadProductsByCategory();
   }, []);
 
-  console.log(productList);
+  console.log(productLists);
 
   return (
     <>
@@ -34,7 +34,11 @@ function ProductListPage(props) {
       />
       <div class="album py-5 bg-dark-custom">
         <div class="container">
-          <Products productList={productList} />
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            {productLists.map((product) => (
+              <Products product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </>

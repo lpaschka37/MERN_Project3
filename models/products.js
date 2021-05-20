@@ -12,7 +12,7 @@ productImage: {
      required: true
      },
   description: String,
-  rating: Number,
+  ratings: Array,
   price: Number,
   seller: String,
   category: {
