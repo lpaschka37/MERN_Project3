@@ -9,13 +9,16 @@ import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 function CheckOut(props) {
   const [cartItems, setCartItems] = useState([]);
 
+  const { update, cart, setCart } = props;
+
   useEffect(() => {
-    console.log("useeffect prop cart", props.cart);
     setCartItems(props.cart);
   }, [props]);
 
   function removeFromCart(index) {
-    console.log("removing", index);
+    const newCart = [...cart];
+    newCart.splice(index, 1);
+    setCart(newCart);
   }
 
   return (
@@ -128,7 +131,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="row">
-                    <div className="col-md-3 mb-3">
+                      <div className="col-md-3 mb-3">
                         <label htmlFor="city">City</label>
                         <input
                           type="text"
@@ -220,7 +223,7 @@ function CheckOut(props) {
                         id="same-address"
                       />
                       <label className="custom-control-label px-2" htmlFor="same-address">
-                         Shipping address is the same as my billing address
+                        Shipping address is the same as my billing address
                       </label>
                     </div>
                     <div className="custom-control custom-checkbox">

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import API from "../utils/API";
 import { useHistory } from "react-router-dom";
+import API from "../utils/API";
 
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 
 function SigninPage(props) {
-  let history = useHistory();
+  const history = useHistory();
   // State
   const [formRegister, setFormRegister] = useState({});
   const [formSignin, setFormSignin] = useState({});
@@ -32,8 +32,12 @@ function SigninPage(props) {
         password: formSignin.password,
       })
         .then((res) => {
-          loginUser(res.data.username);
-          history.push("/");
+          if (res.data.err) {
+            alert(res.data.err);
+          } else {
+            loginUser(res.data.username);
+            history.push("/");
+          }
         })
         .catch((err) => console.log(err));
     } else if (formType === "register") {
@@ -45,9 +49,10 @@ function SigninPage(props) {
         .then((res) => {
           if (res.data.err) {
             alert(res.data.err);
+          } else {
+            loginUser(res.data.username);
+            history.push("/");
           }
-          loginUser(res.data.username);
-          history.push("/");
         })
         .catch((err) => console.log("signin error,", err.data));
     }
@@ -86,7 +91,7 @@ function SigninPage(props) {
                     <form style={{ color: "#fff" }}>
                       <div className="row">
                         <label
-                          for="inputUN"
+                          htmlFor="inputUN"
                           className="col-sm-4 col-form-label"
                         >
                           User Name
@@ -103,7 +108,7 @@ function SigninPage(props) {
                       </div>
                       <div className="row">
                         <label
-                          for="inputPW"
+                          htmlFor="inputPW"
                           className="col-sm-4 col-form-label"
                         >
                           Password
@@ -144,7 +149,7 @@ function SigninPage(props) {
                     <form style={{ color: "#fff" }}>
                       <div className="row">
                         <label
-                          for="inputUN"
+                          htmlFor="inputUN"
                           className="col-sm-4 col-form-label"
                         >
                           Username
@@ -161,7 +166,7 @@ function SigninPage(props) {
                       </div>
                       <div className="row">
                         <label
-                          for="inputPW"
+                          htmlFor="inputPW"
                           className="col-sm-4 col-form-label"
                         >
                           Password
@@ -203,9 +208,9 @@ function SigninPage(props) {
                         onClick={(e) => handleFormSubmit(e, "register")}
                         disabled={
                           !(
-                            formRegister.username &&
-                            formRegister.password &&
-                            formRegister.email
+                            formRegister.username
+                            && formRegister.password
+                            && formRegister.email
                           )
                         }
                         type="submit"

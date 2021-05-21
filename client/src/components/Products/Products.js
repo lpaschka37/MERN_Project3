@@ -93,7 +93,7 @@ function Products(props) {
                 </div>
               )}
             </div>
-            <button onClick={(e) => addToCart(e, product)} className="btn cart-btn">Add to Cart</button>
+            <button disabled={props.user === null} onClick={(e) => addToCart(e, product)} className="btn cart-btn">Add to Cart</button>
           </div>
         </div>
       </div>

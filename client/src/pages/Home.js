@@ -24,7 +24,6 @@ function Home() {
 
   // useEffect
   useEffect(() => {
-    console.log("using effect");
     loadProducts();
   }, []);
 
@@ -55,7 +54,7 @@ function Home() {
         className="carousel"
         data-bs-ride="Carousel"
       >
-        <div className="carousel-indicators">
+        {/* <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
@@ -70,7 +69,7 @@ function Home() {
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
-        </div>
+        </div> */}
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
