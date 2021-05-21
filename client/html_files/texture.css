@@ -1,0 +1,32 @@
+
+
+/*Utils*/
+
+.hide{
+	display: none;
+}
+
+.spacer{
+	height:15px;
+}
+
+.center{
+	text-align: center;
+}
+
+.whiteBG{
+background-color: rgba(255, 255, 255, 0.55);
+}
+
+.optionSelected{
+background-color: #FDF4DC;
+}
+.btn{
+  margin: 15px 0px 0px 5px;
+  background-color: #45a29e !important;
+  color: #fff !important;
+  width: 100px;
+  border-radius: 8px;
+  border: none;
+  padding: 4px;
+}

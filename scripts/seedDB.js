@@ -53,10 +53,20 @@ const productsSeed = [
     category: "Gare Wares",
   },
   {
-    productImage: "cheese-queso-dip.png",
-    productName: "Queso Beso",
-    description: "K, sooo, this is just a gooey mixture of cheese and peppers.",
-    price: 14.49,
+    productImage: "garvis.png",
+    productName: "Gary Vision",
+    description: "Everyone's favorite superhero.",
+    price: 24.49,
+    seller: "Garyphanalia",
+    ratings: [],
+    category: "Gare Wares",
+  },
+  
+  {
+    productImage: "garygook.png",
+    productName: "Hello, My Name is Gary",
+    description: "One hundred of everyone's favorite Garys all together for the first time.",
+    price: 22.49,
     seller: "Garyphanalia",
     ratings: [],
     category: "Gare Wares",
@@ -70,6 +80,17 @@ const productsSeed = [
     ratings: [],
     category: "Gare Wares",
   },
+  {
+    productImage: "lemons.png",
+    productName: "lemons",
+    description: "Lemons are not edible, but the coins are",
+    price: 12.99,
+    seller: "Garyphanalia",
+    ratings: [],
+    category: "Gare Wares",
+  },
+
+
   {
     productImage: "scoville.png",
     productName: "Scoville",
@@ -110,6 +131,27 @@ const productsSeed = [
     ratings: [],
     category: "Board Games",
   },
+  {
+    productImage: "gary-game.png",
+    productName: "The Gary Genesis",
+    description:
+      "Where it all began...",
+    price: 12.99,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
+  },{
+    productImage: "spongeg.png",
+    productName: "Where's Gary",
+    description:
+      "Help Spongebob find Gary",
+    price: 32.99,
+    seller: "nathan",
+    ratings: [],
+    category: "Board Games",
+  },
+
+
   {
     productImage: "vinyl.png",
     productName: "Records",
@@ -168,6 +210,8 @@ const productsSeed = [
     ratings: [],
     category: "Vinyl",
   },
+
+  
   {
     productImage: "pinata.png",
     productName: "Pinata",
