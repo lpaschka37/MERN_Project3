@@ -36,7 +36,7 @@ function ProductListPage(props) {
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             {productLists.map((product) => (
-              <Products product={product} cart={props.cart} setCart={props.setCart} key={product._id} />
+              <Products product={product} user={props.user} cart={props.cart} setCart={props.setCart} key={product._id} />
             ))}
           </div>
         </div>

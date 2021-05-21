@@ -17,6 +17,7 @@ function Products(props) {
 
   useEffect(() => {
     setProduct(props.product);
+    console.log(props.user);
   }, [props]);
 
   useEffect(() => {
@@ -93,7 +94,7 @@ function Products(props) {
                 </div>
               )}
             </div>
-            <button onClick={(e) => addToCart(e, product)} className="btn cart-btn">Add to Cart</button>
+            <button disabled={props.user === null} onClick={(e) => addToCart(e, product)} className="btn cart-btn">Add to Cart</button>
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ function App() {
         exact
         path="/:category/productlist"
         component={(props) => (
-          <ProductListPage {...props} cart={cart} setCart={setCart} update={updateTemp} />
+          <ProductListPage {...props} cart={cart} setCart={setCart} user={signedIn} update={updateTemp} />
         )}
       />
       <Route
