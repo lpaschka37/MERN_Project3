@@ -17,7 +17,6 @@ function Products(props) {
 
   useEffect(() => {
     setProduct(props.product);
-    console.log(props.user);
   }, [props]);
 
   useEffect(() => {

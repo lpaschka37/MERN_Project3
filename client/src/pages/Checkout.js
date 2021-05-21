@@ -9,13 +9,16 @@ import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
 function CheckOut(props) {
   const [cartItems, setCartItems] = useState([]);
 
+  const { update, cart, setCart } = props;
+
   useEffect(() => {
-    console.log("useeffect prop cart", props.cart);
     setCartItems(props.cart);
   }, [props]);
 
   function removeFromCart(index) {
-    console.log("removing", index);
+    const newCart = [...cart];
+    newCart.splice(index, 1);
+    setCart(newCart);
   }
 
   return (
