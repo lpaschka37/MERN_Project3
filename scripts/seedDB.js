@@ -63,7 +63,7 @@ const productsSeed = [
   },
   
   {
-    productImage: "garybook.png",
+    productImage: "gary-book.png",  
     productName: "Hello, My Name is Gary",
     description: "One hundred of everyone's favorite Garys all together for the first time.",
     price: 22.49,
