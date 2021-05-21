@@ -128,7 +128,7 @@ function CheckOut(props) {
                     </div>
 
                     <div className="row">
-                    <div className="col-md-3 mb-3">
+                      <div className="col-md-3 mb-3">
                         <label htmlFor="city">City</label>
                         <input
                           type="text"
@@ -220,7 +220,7 @@ function CheckOut(props) {
                         id="same-address"
                       />
                       <label className="custom-control-label px-2" htmlFor="same-address">
-                         Shipping address is the same as my billing address
+                        Shipping address is the same as my billing address
                       </label>
                     </div>
                     <div className="custom-control custom-checkbox">

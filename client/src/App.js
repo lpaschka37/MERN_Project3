@@ -15,43 +15,43 @@ function App() {
   const [signedIn, setSignedIn] = useState("");
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    console.log("logged in user lookup");
+  function updateTemp() {
+    console.log("reloading localStorage");
     const loggedInUser = localStorage.getItem("user");
     const savedCart = localStorage.getItem("cart");
-    if (loggedInUser) {
-      setSignedIn(loggedInUser);
-    }
-    if (savedCart) {
-      console.log("saved cart", JSON.parse(savedCart));
-      setCart(JSON.parse(savedCart));
-    }
+    console.log("localS savedCart", savedCart);
+    setSignedIn(loggedInUser || null);
+    setCart(JSON.parse(savedCart) || []);
+  }
+
+  useEffect(() => {
+    updateTemp();
   }, []);
 
   return (
     // Put Products into state
     <Router>
-      <NavTop user={signedIn} setuser={setSignedIn} cart={cart} />
+      <NavTop user={signedIn} setuser={setSignedIn} cart={cart} update={updateTemp}/>
       <Route exact path="/" component={Home} />
       <Route
         exact
         path="/:category/productlist"
         component={(props) => (
-          <ProductListPage {...props} cart={cart} setCart={setCart} />
+          <ProductListPage {...props} cart={cart} setCart={setCart} update={updateTemp} />
         )}
       />
       <Route
         exact
         path="/checkout"
         component={(props) => (
-          <CheckOut {...props} cart={cart} setCart={setCart} />
+          <CheckOut {...props} cart={cart} setCart={setCart} update={updateTemp} />
         )}
       />
       <Route
         exact
         path="/signin"
         render={(props) => (
-          <SignIn {...props} user={signedIn} setuser={setSignedIn} />
+          <SignIn {...props} user={signedIn} setuser={setSignedIn} update={updateTemp} />
         )}
       />
       <Footer />

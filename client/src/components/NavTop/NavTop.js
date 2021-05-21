@@ -4,10 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavTop(props) {
+  const { update } = props;
   const handleSignOut = () => {
     props.setuser("");
     localStorage.clear();
-  }
+    update();
+  };
   return (
     <Navbar
       collapseOnSelect

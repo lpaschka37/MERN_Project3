@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable prefer-destructuring */
 import React, { useState, useEffect } from "react";
 import CategoryJumbotron from "../components/Jumbotron/CategoryJumbotron";
@@ -23,7 +24,7 @@ function ProductListPage(props) {
   useEffect(() => {
     setCategory(props.match.params.category);
     loadProductsByCategory();
-  }, []);
+  }, [props, category]);
 
   return (
     <>
@@ -35,7 +36,7 @@ function ProductListPage(props) {
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             {productLists.map((product) => (
-              <Products product={product} cart={props.cart} setCart={props.setCart} />
+              <Products product={product} cart={props.cart} setCart={props.setCart} key={product._id} />
             ))}
           </div>
         </div>
